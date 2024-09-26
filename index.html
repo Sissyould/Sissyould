@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            height: 100vh; /* Assurer que le corps prend toute la hauteur de la fenêtre */
             background-color: #f4f4f4;
         }
 
@@ -70,6 +71,9 @@
             flex-grow: 1;
             padding: 20px;
             text-align: center;
+            background-color: white; /* Couleur blanche pour le contenu principal */
+            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
+            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
         }
 
         /* Style du GIF */
