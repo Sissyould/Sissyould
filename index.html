@@ -7,11 +7,43 @@
     <style>
         body {
             font-family: 'Inria Sans', sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
+        /* Style pour la barre de navigation */
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        /* Style du contenu principal */
         h1 {
             color: brown;
             font-size: 30px;
+            margin-left: 20px;
+        }
+
+        p {
+            margin-left: 20px;
         }
 
         img {
@@ -23,6 +55,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body class="inria-sans-regular">
+
+    <!-- Barre de navigation -->
+    <div class="navbar">
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil">
+            Profil
+        </a>
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3197/3197967.png" alt="Formations">
+            Formations
+        </a>
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/8078/8078678.png" alt="Expérience">
+            Expérience
+        </a>
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt">
+            Centres d'intérêt
+        </a>
+    </div>
+
+    <!-- Contenu principal -->
     <h1>Conception de l'information</h1>
     <p>Exercices du cours.</p>
     <p>Dans le cadre de la formation <a href="https://humanites-numeriques.univ-paris8.fr/-Master-GSI-" target="_blank">GSI de l'Univ. Paris 8</a>.</p>
@@ -30,5 +84,6 @@
     <p>
         <img src="https://www.univ-paris8.fr/IMG/jpg_12-bu-luminaires.jpg" alt="Univ Paris 8">
     </p>
+    
 </body>
 </html>
