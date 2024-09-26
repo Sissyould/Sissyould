@@ -10,33 +10,30 @@
             margin: 0;
             padding: 0;
             display: flex;
-            height: 100vh; /* Assurer que le corps prend toute la hauteur de la fenêtre */
+            height: 100vh;
             background-color: #f4f4f4;
-            overflow: hidden; /* Pour éviter le défilement indésirable */
+            overflow: hidden;
         }
 
-        /* Style pour le titre principal */
         h1 {
-            color: #1E90FF; /* Bleu courtois */
+            color: #1E90FF;
             font-size: 50px;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             margin-top: 20px;
             text-align: center;
-            width: 100%; /* Centrer le titre */
+            width: 100%;
         }
 
-        /* Style du logo */
         .logo {
             display: block;
             margin: 20px auto;
             width: 100px;
-            animation: fadeIn 2s; /* Animation d'apparition */
+            animation: fadeIn 2s;
         }
 
-        /* Style de la barre latérale gauche */
         .sidebar {
             width: 200px;
-            height: 100vh; /* Pleine hauteur */
+            height: 100vh;
             background-color: #333;
             display: flex;
             flex-direction: column;
@@ -56,7 +53,7 @@
             width: 100%;
             box-sizing: border-box;
             margin: 5px 0;
-            transition: background-color 0.3s; /* Transition pour un effet plus fluide */
+            transition: background-color 0.3s;
         }
 
         .sidebar a img {
@@ -69,31 +66,28 @@
             background-color: #575757;
         }
 
-        /* Style du conteneur principal */
         .main-content {
             flex-grow: 1;
             padding: 20px;
             text-align: center;
-            background-color: white; /* Couleur blanche pour le contenu principal */
-            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
-            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
-            position: relative; /* Pour la position du texte dynamique */
+            background-color: white;
+            height: 100vh;
+            overflow: auto;
+            position: relative;
         }
 
-        /* Style du GIF */
         .gif-container {
             margin-top: 20px;
-            animation: slideIn 1s; /* Animation d'entrée pour le GIF */
+            animation: slideIn 1s;
         }
 
         .gif-container img {
-            width: 80%; /* Ajustement de la taille du GIF */
-            max-width: 600px; /* Limite la largeur pour un meilleur rendu */
+            width: 80%;
+            max-width: 600px;
             height: auto;
             object-fit: cover;
         }
 
-        /* Style des boutons d'action en bas */
         .button-container {
             margin-top: 20px;
             display: flex;
@@ -103,22 +97,21 @@
         .button-container a {
             text-decoration: none;
             color: white;
-            background-color: #1E90FF; /* Bleu courtois */
+            background-color: #1E90FF;
             padding: 15px 30px;
             border-radius: 10px;
             font-size: 18px;
             margin: 10px;
-            transition: background-color 0.3s; /* Transition pour les boutons */
+            transition: background-color 0.3s;
         }
 
         .button-container a:hover {
             background-color: #1c86ee;
         }
 
-        /* Style de la bannière */
         .banner {
             background-color: #333;
-            width: 100%; /* Pleine largeur */
+            width: 100%;
             padding: 10px;
             display: flex;
             justify-content: space-around;
@@ -126,7 +119,6 @@
             position: relative;
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -137,25 +129,24 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Styles pour les articles */
         .article {
             border: 1px solid #ccc;
             border-radius: 8px;
             margin: 15px;
             padding: 15px;
             background-color: #fafafa;
-            transition: transform 0.3s; /* Transition pour un effet de zoom */
-            text-align: left; /* Alignement du texte à gauche */
+            transition: transform 0.3s;
+            text-align: left;
         }
 
         .article:hover {
-            transform: scale(1.02); /* Zoom léger au survol */
+            transform: scale(1.02);
         }
 
         .article img {
-            max-width: 100%; /* S'assurer que les images ne débordent pas */
+            width: 100%; /* Image prend toute la largeur de l'article */
             height: auto;
-            border-radius: 5px; /* Coins arrondis pour les images */
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -202,25 +193,22 @@
         <div id="articles-section">
             <h2>Articles</h2>
             <div class="article">
-                <img src="https://via.placeholder.com/300?text=IA+et+Travail" alt="Article sur l'IA et le travail">
+                <img src="https://img.freepik.com/photos-gratuite/illustration-concept-numerique-reseau-internet-dans-le-monde_23-2150060411.jpg" alt="Article sur l'IA et le travail">
                 <h3>Technologie</h3>
                 <h4>L'IA révolutionne le monde du travail : une étude approfondie</h4>
-                <p>L'intelligence artificielle s'immisce de plus en plus dans notre quotidien, transformant radicalement les méthodes de travail. Une récente étude révèle que 80% des entreprises ont déjà intégré des outils d'IA dans leurs processus. Mais quelles sont les réelles conséquences de cette révolution ? Les avantages sont nombreux : automatisation des tâches répétitives, prise de décision plus rapide et plus précise, amélioration de la productivité. Cependant, l'IA soulève également des questions éthiques et sociales. La disparition de certains emplois, le risque de biais algorithmiques et la dépendance croissante aux machines sont autant de défis à relever. Cet article explore en profondeur les impacts de l'IA sur le monde du travail, en s'appuyant sur les témoignages d'experts et les résultats de diverses recherches.</p>
-                <p><strong>Mots-clés :</strong> intelligence artificielle, travail, automatisation, éthique, étude</p>
+                <p>L'intelligence artificielle s'immisce de plus en plus dans notre quotidien, transformant radicalement les méthodes de travail. Une récente étude révèle que 80% des entreprises ont déjà intégré des outils d'IA dans leurs processus. Mais quelles sont les réelles conséquences de cette révolution ? Les avantages sont nombreux : automatisation des tâches répétitives, prise de décision plus rapide et plus précise, amélioration de la productivité. Cependant, l'IA soulève également des questions éthiques et sociales...</p>
             </div>
             <div class="article">
-                <img src="https://via.placeholder.com/300?text=Pollution+Plastique" alt="Article sur la pollution plastique">
+                <img src="https://image.shutterstock.com/image-vector/technology-collage-background-260nw-654399121.jpg" alt="Article sur la pollution plastique">
                 <h3>Environnement</h3>
                 <h4>La pollution plastique : une menace grandissante pour les océans</h4>
-                <p>Les océans, véritables poumons de notre planète, sont en danger. La pollution plastique, un fléau mondial, menace la biodiversité marine et les écosystèmes côtiers. Chaque année, des millions de tonnes de plastique finissent dans les océans, fragmentées en microparticules qui pénètrent dans la chaîne alimentaire. Cet article dresse un état des lieux alarmant de la pollution plastique et présente les solutions existantes pour lutter contre ce fléau. Des initiatives citoyennes aux politiques publiques, en passant par les innovations technologiques, de nombreuses pistes sont explorées.</p>
-                <p><strong>Mots-clés :</strong> pollution plastique, océans, environnement, biodiversité, solutions</p>
+                <p>Les océans, véritables poumons de notre planète, sont en danger. La pollution plastique, un fléau mondial, menace la biodiversité marine et les écosystèmes côtiers. Chaque année, des millions de tonnes de plastique finissent dans les océans, fragmentées en microparticules qui pénètrent dans la chaîne alimentaire...</p>
             </div>
             <div class="article">
-                <img src="https://via.placeholder.com/300?text=Téléttravail" alt="Article sur le télétravail">
+                <img src="https://img.freepik.com/photos-gratuite/mascotte-d-animation-teknoloji-dans-le-monde-ai_23-2150060118.jpg" alt="Article sur le télétravail">
                 <h3>Société</h3>
                 <h4>Le télétravail : une révolution en marche ?</h4>
-                <p>La pandémie de Covid-19 a accéléré l'adoption du télétravail, bouleversant ainsi nos habitudes de travail. Mais le télétravail est-il une solution durable ? Quels sont ses avantages et ses inconvénients ? Cet article analyse les impacts du télétravail sur la productivité, la santé mentale, les relations sociales et l'équilibre vie professionnelle/vie personnelle. Il présente également les défis auxquels les entreprises et les salariés sont confrontés dans la mise en place de cette nouvelle organisation du travail.</p>
-                <p><strong>Mots-clés :</strong> télétravail, pandémie, productivité, santé mentale, équilibre vie professionnelle/vie personnelle</p>
+                <p>La pandémie de Covid-19 a accéléré l'adoption du télétravail, bouleversant ainsi nos habitudes de travail. Mais le télétravail est-il une solution durable ? Quels sont ses avantages et ses inconvénients ? Cet article analyse les impacts du télétravail sur la productivité, la santé mentale, les relations sociales et l'équilibre vie professionnelle/vie personnelle...</p>
             </div>
         </div>
 
@@ -234,15 +222,14 @@
     <script>
         function displayContent(section) {
             const content = {
-                profil: "Voici des informations sur votre profil.",
-                formations: "Voici la liste de vos formations.",
-                experience: "Voici vos expériences professionnelles.",
-                interets: "Voici vos centres d'intérêt."
+                profil: "<h2>Profil</h2><p>Je suis un professionnel passionné...</p>",
+                formations: "<h2>Formations</h2><p>J'ai suivi des formations...</p>",
+                experience: "<h2>Expérience</h2><p>Mon parcours professionnel...</p>",
+                interets: "<h2>Centres d'intérêt</h2><p>Mes passions incluent...</p>"
             };
-
-            document.getElementById('dynamic-content').innerHTML = `<p>${content[section]}</p>`;
+            document.getElementById("dynamic-content").innerHTML = content[section] || "<p>Sélectionnez une option dans la barre latérale pour afficher plus d'informations.</p>";
         }
     </script>
-
 </body>
 </html>
+
