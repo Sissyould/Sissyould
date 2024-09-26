@@ -11,6 +11,8 @@
             padding: 0;
             text-align: center;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: row;
         }
 
         /* Style pour le titre principal */
@@ -21,39 +23,6 @@
             margin-top: 20px;
         }
 
-        /* Style pour la barre de navigation */
-        .navbar {
-            background-color: #333;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px;
-            width: 100%;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar a img {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-
-        /* Style du contenu principal */
-        p {
-            margin-left: 20px;
-        }
-
-        img {
-            width: 200px;
-        }
-
         /* Style du logo dans le titre */
         .logo {
             display: block;
@@ -61,21 +30,21 @@
             width: 100px;
         }
 
-        /* Style pour la vidéo */
-        .video-container {
+        /* Style pour le GIF */
+        .gif-container {
             width: 100%;
-            height: 500px;
+            height: auto;
             position: relative;
             margin-top: 20px;
         }
 
-        .video-container video {
+        .gif-container img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
         }
 
-        /* Style des boutons d'action */
+        /* Style des boutons d'action sous le GIF */
         .button-container {
             margin-top: 20px;
         }
@@ -95,6 +64,42 @@
             background-color: #1c86ee;
         }
 
+        /* Style de la barre latérale droite */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .sidebar a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
     </style>
 </head>
 <body>
@@ -103,18 +108,35 @@
     <h1>Bienvenue dans Help Info Entreprise</h1>
     <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo Information">
 
-    <!-- Conteneur de la vidéo -->
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgifer.com%2Fen%2Fgifs%2Ftechnology&psig=AOvVaw0-NHtvsbYXvkyWCn40-aKa&ust=1727427384420000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPj4s9Ce4IgDFQAAAAAdAAAAABAE" type="video/mp4">
-            Votre navigateur ne supporte pas les vidéos HTML5.
-        </video>
+    <!-- Conteneur du GIF -->
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/3o7TKP1B2lL8hLZxVq/giphy.gif" alt="GIF sur la technologie">
     </div>
 
-    <!-- Boutons d'action -->
+    <!-- Boutons d'action sous le GIF -->
     <div class="button-container">
         <a href="#plus-info">Plus d'info</a>
         <a href="mailto:votremail@example.com">Contactez-nous</a>
+    </div>
+
+    <!-- Barre latérale droite -->
+    <div class="sidebar">
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil">
+            Profil
+        </a>
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3197/3197967.png" alt="Formations">
+            Formations
+        </a>
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/8078/8078678.png" alt="Expérience">
+            Expérience
+        </a>
+        <a href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt">
+            Centres d'intérêt
+        </a>
     </div>
 
 </body>
