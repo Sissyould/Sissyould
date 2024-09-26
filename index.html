@@ -195,7 +195,7 @@
 
         <!-- Contenu dynamique -->
         <div id="dynamic-content">
-            <p>Sélectionnez une option dans la barre latérale pour afficher plus d'informations.</p>
+            <!-- Contenu affiché dynamiquement ici -->
         </div>
 
         <!-- Articles Section -->
@@ -209,40 +209,47 @@
                 <p><strong>Mots-clés :</strong> intelligence artificielle, travail, automatisation, éthique, étude</p>
             </div>
             <div class="article">
-                <img src="https://www.google.com/imgres?q=image%20gratuit%20sur%20innovation%20&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FC4D0DAQHPur6U4j-xGQ%2Flearning-public-crop_288_512%2F0%2F1612506389872%3Fe%3D2147483647%26v%3Dbeta%26t%3DU1I-PJ12DgIiE7QPsHpbaEGdsM1gU0F9-hGnC3d1xIU&imgrefurl=https%3A%2F%2Ffr.linkedin.com%2Flearning%2Fla-minute-de-formation-l-amelioration-des-processus%2Fdefinir-l-innovation&docid=MEGyeFG7SiaYpM&tbnid=kzNjOfdR3e7btM&vet=12ahUKEwi5_MaQ2OCIAxWMcKQEHUwuFl8QM3oECFwQAA..i&w=512&h=288&hcb=2&itg=1&ved=2ahUKEwi5_MaQ2OCIAxWMcKQEHUwuFl8QM3oECFwQAA" alt="Article sur la pollution plastique">
-                <h3>Environnement</h3>
-                <h4>La pollution plastique : une menace grandissante pour les océans</h4>
-                <p>Les océans, véritables poumons de notre planète, sont en danger. La pollution plastique, un fléau mondial, menace la biodiversité marine et les écosystèmes côtiers. Chaque année, des millions de tonnes de plastique finissent dans les océans, fragmentées en microparticules qui pénètrent dans la chaîne alimentaire. Cet article dresse un état des lieux alarmant de la pollution plastique et présente les solutions existantes pour lutter contre ce fléau. Des initiatives citoyennes aux politiques publiques, en passant par les innovations technologiques, de nombreuses pistes sont explorées.</p>
-                <p><strong>Mots-clés :</strong> pollution plastique, océans, environnement, biodiversité, solutions</p>
-            </div>
-            <div class="article">
-                <img src="https://www.google.com/imgres?q=image%20gratuit%20sur%20innovation%20&imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fid%2F1363405922%2Ffr%2Fphoto%2Fconcept-big-data-r%25C3%25A9seau-neuronal-num%25C3%25A9rique-femme-daffaires-touchant-la-main-introduction-de.jpg%3Fs%3D612x612%26w%3D0%26k%3D20%26c%3DDOhmk8NyQMNOy5G2nohceeZ_NwHTsPlbsqSfFMcFHUo%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Ffr%2Fphotos%2Finnovation&docid=e8FtWhRfZiBl5M&tbnid=axVIYylykheZEM&vet=12ahUKEwi5_MaQ2OCIAxWMcKQEHUwuFl8QM3oFCIEBEAA..i&w=612&h=303&hcb=2&ved=2ahUKEwi5_MaQ2OCIAxWMcKQEHUwuFl8QM3oFCIEBEAA" alt="Article sur le télétravail">
-                <h3>Société</h3>
-                <h4>Le télétravail : une révolution en marche ?</h4>
-                <p>La pandémie de Covid-19 a accéléré l'adoption du télétravail, bouleversant ainsi nos habitudes de travail. Mais le télétravail est-il une solution durable ? Quels sont ses avantages et ses inconvénients ? Cet article analyse les impacts du télétravail sur la productivité, la santé mentale, les relations sociales et l'équilibre vie professionnelle/vie personnelle. Il présente également les défis auxquels les entreprises et les salariés sont confrontés dans la mise en place de cette nouvelle organisation du travail.</p>
-                <p><strong>Mots-clés :</strong> télétravail, pandémie, productivité, santé mentale, équilibre vie professionnelle/vie personnelle</p>
+                <img src="https://cdn.pixabay.com/photo/2020/07/22/20/38/education-4511366_1280.jpg" alt="Article sur la technologie éducative">
+                <h3>Éducation</h3>
+                <h4>Comment la technologie transforme l'éducation moderne</h4>
+                <p>La technologie éducative connaît un essor sans précédent, apportant des outils innovants pour l'apprentissage. Des plateformes d'apprentissage en ligne aux applications interactives, les étudiants bénéficient d'une personnalisation accrue de leurs parcours d'apprentissage. De plus, les enseignants peuvent désormais accéder à des ressources pédagogiques variées et adaptées. Toutefois, cette transformation nécessite également une réflexion sur l'égalité d'accès à ces outils technologiques, et sur l'importance de l'accompagnement pédagogique dans cette transition. Cet article se penche sur les avantages et les défis de la technologie dans l'éducation.</p>
+                <p><strong>Mots-clés :</strong> éducation, technologie, apprentissage, égalité, ressources</p>
             </div>
         </div>
 
-        <!-- Boutons d'action en bas -->
+        <!-- Conteneur pour les boutons d'action -->
         <div class="button-container">
-            <a href="#plus-info" onclick="alert('Plus d\'informations à venir !')">Plus d'info</a>
-            <a href="mailto:votremail@example.com">Contactez-nous</a>
+            <a href="#contact" onclick="displayContent('contact')">Contactez-nous</a>
+            <a href="#services" onclick="displayContent('services')">Nos services</a>
         </div>
     </div>
 
     <script>
         function displayContent(section) {
-            const content = {
-                profil: "Voici des informations sur votre profil.",
-                formations: "Voici la liste de vos formations.",
-                experience: "Voici vos expériences professionnelles.",
-                interets: "Voici vos centres d'intérêt."
-            };
-
-            document.getElementById('dynamic-content').innerHTML = <p>${content[section]}</p>;
+            const contentDiv = document.getElementById('dynamic-content');
+            switch(section) {
+                case 'profil':
+                    contentDiv.innerHTML = '<h2>Profil</h2><p>Voici les détails de votre profil.</p>';
+                    break;
+                case 'formations':
+                    contentDiv.innerHTML = '<h2>Formations</h2><p>Voici vos formations.</p>';
+                    break;
+                case 'experience':
+                    contentDiv.innerHTML = '<h2>Expérience</h2><p>Voici votre expérience professionnelle.</p>';
+                    break;
+                case 'interets':
+                    contentDiv.innerHTML = '<h2>Centres d\'intérêt</h2><p>Voici vos centres d\'intérêt.</p>';
+                    break;
+                case 'contact':
+                    contentDiv.innerHTML = '<h2>Contactez-nous</h2><p>Voici nos coordonnées.</p>';
+                    break;
+                case 'services':
+                    contentDiv.innerHTML = '<h2>Nos services</h2><p>Voici les services que nous proposons.</p>';
+                    break;
+                default:
+                    contentDiv.innerHTML = '<h2>Section non trouvée</h2>';
+            }
         }
     </script>
-
 </body>
 </html>
