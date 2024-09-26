@@ -3,164 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Info Entreprise</title>
+    <title>Template Dynamique</title>
     <style>
         body {
-            font-family: 'Inria Sans', sans-serif;
             margin: 0;
-            padding: 0;
-            display: flex;
-            height: 100vh; /* Assurer que le corps prend toute la hauteur de la fenêtre */
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Pour cacher les barres de défilement */
         }
-
-        /* Style pour le titre principal */
-        h1 {
-            color: #1E90FF; /* Bleu courtois */
-            font-size: 50px;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
-            margin-top: 20px;
-            text-align: center;
-            width: 100%; /* Centrer le titre */
-        }
-
-        /* Style du logo */
-        .logo {
-            display: block;
-            margin: 20px auto;
-            width: 100px;
-        }
-
-        /* Style de la barre latérale gauche */
-        .sidebar {
-            width: 200px;
-            height: 100vh; /* Pleine hauteur */
-            background-color: #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .sidebar a {
+        .header {
+            background: #4CAF50;
             color: white;
-            text-decoration: none;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            margin: 5px 0;
-        }
-
-        .sidebar a img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-
-        .sidebar a:hover {
-            background-color: #575757;
-        }
-
-        /* Style du conteneur principal */
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
-            background-color: white; /* Couleur blanche pour le contenu principal */
-            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
-            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
         }
-
-        /* Style du GIF */
-        .gif-container {
-            margin-top: 20px;
-        }
-
-        .gif-container img {
-            width: 80%; /* Ajustement de la taille du GIF */
-            max-width: 600px; /* Limite la largeur pour un meilleur rendu */
-            height: auto;
-            object-fit: cover;
-        }
-
-        /* Style des boutons d'action en bas */
-        .button-container {
-            margin-top: 20px;
+        .nav {
             display: flex;
             justify-content: center;
-        }
-
-        .button-container a {
-            text-decoration: none;
-            color: white;
-            background-color: #1E90FF; /* Bleu courtois */
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            margin: 10px;
-        }
-
-        .button-container a:hover {
-            background-color: #1c86ee;
-        }
-
-        /* Style de la bannière */
-        .banner {
             background-color: #333;
-            width: 100%; /* Pleine largeur */
-            padding: 10px;
+        }
+        .nav a {
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            height: 80vh;
             display: flex;
-            justify-content: space-around;
             align-items: center;
+            justify-content: center;
+            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+            background-size: cover;
             position: relative;
+        }
+        .dynamic-text {
+            position: absolute;
+            color: white;
+            font-size: 50px;
+            animation: fadeIn 2s infinite;
+        }
+        @keyframes fadeIn {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <!-- Barre latérale gauche -->
-    <div class="sidebar">
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil">
-            Profil
-        </a>
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/3197/3197967.png" alt="Formations">
-            Formations
-        </a>
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/8078/8078678.png" alt="Expérience">
-            Expérience
-        </a>
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt">
-            Centres d'intérêt
-        </a>
+    <div class="header">
+        <h1>Bienvenue sur Mon Site Dynamique</h1>
     </div>
 
-    <!-- Conteneur principal -->
-    <div class="main-content">
-        <!-- Logo au-dessus du titre -->
-        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo Information">
-        <!-- Titre sur la page -->
-        <h1>Bienvenue dans Help Info Entreprise</h1>
-
-        <!-- Conteneur du GIF -->
-        <div class="gif-container">
-            <img src="https://cdn.pixabay.com/animation/2022/09/27/12/02/12-02-19-627_512.gif" alt="GIF sur la technologie">
-        </div>
-
-        <!-- Boutons d'action en bas -->
-        <div class="button-container">
-            <a href="#plus-info">Plus d'info</a>
-            <a href="mailto:votremail@example.com">Contactez-nous</a>
-        </div>
+    <div class="nav">
+        <a href="#home">Accueil</a>
+        <a href="#about">À Propos</a>
+        <a href="#contact">Contact</a>
     </div>
+
+    <div class="content" id="home">
+        <div class="dynamic-text">Ceci est un texte dynamique !</div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Mon Site. Tous droits réservés.</p>
+    </div>
+
+    <script>
+        // JavaScript pour ajouter un effet de mouvement au texte
+        let dynamicText = document.querySelector('.dynamic-text');
+        let angle = 0;
+
+        function animateText() {
+            angle += 0.5; // Ajustez la vitesse ici
+            dynamicText.style.transform = `rotate(${angle}deg)`;
+            requestAnimationFrame(animateText);
+        }
+        animateText();
+    </script>
 
 </body>
 </html>
