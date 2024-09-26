@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conception de l'information</title>
+    <title>Help Info Entreprise</title>
     <style>
         body {
             font-family: 'Inria Sans', sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Style pour le titre principal */
+        h1 {
+            color: #1E90FF; /* Bleu courtois */
+            font-size: 50px;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
+            margin-top: 20px;
         }
 
         /* Style pour la barre de navigation */
@@ -36,12 +46,6 @@
         }
 
         /* Style du contenu principal */
-        h1 {
-            color: brown;
-            font-size: 30px;
-            margin-left: 20px;
-        }
-
         p {
             margin-left: 20px;
         }
@@ -49,41 +53,69 @@
         img {
             width: 200px;
         }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body class="inria-sans-regular">
 
-    <!-- Barre de navigation -->
-    <div class="navbar">
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil">
-            Profil
-        </a>
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/3197/3197967.png" alt="Formations">
-            Formations
-        </a>
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/8078/8078678.png" alt="Expérience">
-            Expérience
-        </a>
-        <a href="#">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt">
-            Centres d'intérêt
-        </a>
+        /* Style du logo dans le titre */
+        .logo {
+            display: block;
+            margin: 20px auto;
+            width: 100px;
+        }
+
+        /* Style pour la vidéo */
+        .video-container {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Style des boutons d'action */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #1E90FF; /* Bleu courtois */
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .button-container a:hover {
+            background-color: #1c86ee;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Grand titre avec logo -->
+    <h1>Bienvenue dans Help Info Entreprise</h1>
+    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo Information">
+
+    <!-- Conteneur de la vidéo -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgifer.com%2Fen%2Fgifs%2Ftechnology&psig=AOvVaw0-NHtvsbYXvkyWCn40-aKa&ust=1727427384420000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCPj4s9Ce4IgDFQAAAAAdAAAAABAE" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
     </div>
 
-    <!-- Contenu principal -->
-    <h1>Conception de l'information</h1>
-    <p>Exercices du cours.</p>
-    <p>Dans le cadre de la formation <a href="https://humanites-numeriques.univ-paris8.fr/-Master-GSI-" target="_blank">GSI de l'Univ. Paris 8</a>.</p>
-    <p>Exercices du cours dans le cadre de la formation <a href="https://humanites-numeriques.univ-paris8.fr/-Master-GSI-" target="_blank">GSI de l'Univ. Paris 8</a>.</p>
-    <p>
-        <img src="https://www.univ-paris8.fr/IMG/jpg_12-bu-luminaires.jpg" alt="Univ Paris 8">
-    </p>
-    
+    <!-- Boutons d'action -->
+    <div class="button-container">
+        <a href="#plus-info">Plus d'info</a>
+        <a href="mailto:votremail@example.com">Contactez-nous</a>
+    </div>
+
 </body>
 </html>
