@@ -186,12 +186,11 @@
 
         <!-- Contenu dynamique -->
         <div id="dynamic-content">
-            <p>Sélectionnez une option dans la barre latérale pour afficher plus d'informations.</p>
+            <!-- Ce texte a été retiré -->
         </div>
 
-        <!-- Articles Section -->
+        <!-- Articles Section (Sans le titre "Articles") -->
         <div id="articles-section">
-            <h2>Articles</h2>
             <div class="article">
                 <img src="https://img.freepik.com/photos-gratuite/illustration-concept-numerique-reseau-internet-dans-le-monde_23-2150060411.jpg" alt="Article sur l'IA et le travail">
                 <h3>Technologie</h3>
@@ -227,9 +226,8 @@
                 experience: "<h2>Expérience</h2><p>Mon parcours professionnel...</p>",
                 interets: "<h2>Centres d'intérêt</h2><p>Mes passions incluent...</p>"
             };
-            document.getElementById("dynamic-content").innerHTML = content[section] || "<p>Sélectionnez une option dans la barre latérale pour afficher plus d'informations.</p>";
+            document.getElementById("dynamic-content").innerHTML = content[section] || "";
         }
     </script>
 </body>
 </html>
-
