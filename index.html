@@ -9,10 +9,7 @@
             font-family: 'Inria Sans', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
             display: flex;
-            flex-direction: row;
         }
 
         /* Style pour le titre principal */
@@ -21,61 +18,27 @@
             font-size: 50px;
             font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
             margin-top: 20px;
+            text-align: center;
         }
 
-        /* Style du logo dans le titre */
+        /* Style du logo */
         .logo {
             display: block;
             margin: 20px auto;
             width: 100px;
         }
 
-        /* Style pour le GIF */
-        .gif-container {
-            width: 100%;
-            height: auto;
-            position: relative;
-            margin-top: 20px;
-        }
-
-        .gif-container img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        /* Style des boutons d'action sous le GIF */
-        .button-container {
-            margin-top: 20px;
-        }
-
-        .button-container a {
-            text-decoration: none;
-            color: white;
-            background-color: #1E90FF; /* Bleu courtois */
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            margin: 10px;
-            display: inline-block;
-        }
-
-        .button-container a:hover {
-            background-color: #1c86ee;
-        }
-
-        /* Style de la barre latérale droite */
+        /* Style de la barre latérale gauche */
         .sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
             width: 200px;
-            height: 100%;
+            height: 100vh;
             background-color: #333;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .sidebar a {
@@ -87,7 +50,7 @@
             padding: 10px;
             width: 100%;
             box-sizing: border-box;
-            text-align: left;
+            margin: 5px 0;
         }
 
         .sidebar a img {
@@ -100,27 +63,53 @@
             background-color: #575757;
         }
 
+        /* Style du conteneur principal */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Style du GIF */
+        .gif-container {
+            margin-top: 20px;
+        }
+
+        .gif-container img {
+            width: 100%; /* S'adapte à la largeur de l'écran */
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Style des boutons d'action en bas */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #1E90FF; /* Bleu courtois */
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        .button-container a:hover {
+            background-color: #1c86ee;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Grand titre avec logo -->
-    <h1>Bienvenue dans Help Info Entreprise</h1>
-    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo Information">
-
-    <!-- Conteneur du GIF -->
-    <div class="gif-container">
-        <img src="https://media.giphy.com/media/3o7TKP1B2lL8hLZxVq/giphy.gif" alt="GIF sur la technologie">
-    </div>
-
-    <!-- Boutons d'action sous le GIF -->
-    <div class="button-container">
-        <a href="#plus-info">Plus d'info</a>
-        <a href="mailto:votremail@example.com">Contactez-nous</a>
-    </div>
-
-    <!-- Barre latérale droite -->
+    <!-- Barre latérale gauche -->
     <div class="sidebar">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo Information">
+        <h1>Bienvenue dans Help Info Entreprise</h1>
         <a href="#">
             <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil">
             Profil
@@ -137,6 +126,20 @@
             <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt">
             Centres d'intérêt
         </a>
+    </div>
+
+    <!-- Conteneur principal -->
+    <div class="main-content">
+        <!-- Conteneur du GIF -->
+        <div class="gif-container">
+            <img src="https://img.freepik.com/free-video/young-woman-using-vr-headset-colorful-neon-light-background_164272-186.jpg" alt="GIF sur la technologie">
+        </div>
+
+        <!-- Boutons d'action en bas -->
+        <div class="button-container">
+            <a href="#plus-info">Plus d'info</a>
+            <a href="mailto:votremail@example.com">Contactez-nous</a>
+        </div>
     </div>
 
 </body>
