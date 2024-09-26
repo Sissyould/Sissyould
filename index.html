@@ -88,6 +88,26 @@
             object-fit: cover;
         }
 
+        .article {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #fafafa;
+            transition: transform 0.3s;
+            text-align: left;
+        }
+
+        .article:hover {
+            transform: scale(1.02);
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
         .button-container {
             margin-top: 20px;
             display: flex;
@@ -128,26 +148,6 @@
             from { transform: translateY(-20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
-        .article {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            margin: 15px;
-            padding: 15px;
-            background-color: #fafafa;
-            transition: transform 0.3s;
-            text-align: left;
-        }
-
-        .article:hover {
-            transform: scale(1.02);
-        }
-
-        .article img {
-            width: 100%; /* Image prend toute la largeur de l'article */
-            height: auto;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -179,35 +179,28 @@
         <!-- Titre sur la page -->
         <h1>Bienvenue dans Help Info Entreprise</h1>
 
-        <!-- Conteneur du GIF -->
-        <div class="gif-container">
-            <img src="https://cdn.pixabay.com/animation/2022/09/27/12/02/12-02-19-627_512.gif" alt="GIF sur la technologie">
-        </div>
-
         <!-- Contenu dynamique -->
-        <div id="dynamic-content">
-            <!-- Ce texte a été retiré -->
-        </div>
+        <div id="dynamic-content"></div>
 
-        <!-- Articles Section (Sans le titre "Articles") -->
+        <!-- Articles Section -->
         <div id="articles-section">
             <div class="article">
-                <img src="https://img.freepik.com/photos-gratuite/illustration-concept-numerique-reseau-internet-dans-le-monde_23-2150060411.jpg" alt="Article sur l'IA et le travail">
+                <img src="https://img.freepik.com/photos-gratuite/illustration-3d-dessin-anime-informatique_107791-20426.jpg" alt="Article sur l'informatique">
                 <h3>Technologie</h3>
                 <h4>L'IA révolutionne le monde du travail : une étude approfondie</h4>
-                <p>L'intelligence artificielle s'immisce de plus en plus dans notre quotidien, transformant radicalement les méthodes de travail. Une récente étude révèle que 80% des entreprises ont déjà intégré des outils d'IA dans leurs processus. Mais quelles sont les réelles conséquences de cette révolution ? Les avantages sont nombreux : automatisation des tâches répétitives, prise de décision plus rapide et plus précise, amélioration de la productivité. Cependant, l'IA soulève également des questions éthiques et sociales...</p>
+                <p>L'intelligence artificielle s'immisce de plus en plus dans notre quotidien, transformant radicalement les méthodes de travail...</p>
             </div>
             <div class="article">
-                <img src="https://image.shutterstock.com/image-vector/technology-collage-background-260nw-654399121.jpg" alt="Article sur la pollution plastique">
+                <img src="https://img.freepik.com/photos-gratuite/technologie-animee_53876-97966.jpg" alt="Article sur la technologie">
                 <h3>Environnement</h3>
                 <h4>La pollution plastique : une menace grandissante pour les océans</h4>
-                <p>Les océans, véritables poumons de notre planète, sont en danger. La pollution plastique, un fléau mondial, menace la biodiversité marine et les écosystèmes côtiers. Chaque année, des millions de tonnes de plastique finissent dans les océans, fragmentées en microparticules qui pénètrent dans la chaîne alimentaire...</p>
+                <p>Les océans, véritables poumons de notre planète, sont en danger. La pollution plastique, un fléau mondial...</p>
             </div>
             <div class="article">
-                <img src="https://img.freepik.com/photos-gratuite/mascotte-d-animation-teknoloji-dans-le-monde-ai_23-2150060118.jpg" alt="Article sur le télétravail">
+                <img src="https://img.freepik.com/photos-gratuite/mascotte-dessin-anime-technologie-ai_107791-31834.jpg" alt="Article sur le télétravail">
                 <h3>Société</h3>
                 <h4>Le télétravail : une révolution en marche ?</h4>
-                <p>La pandémie de Covid-19 a accéléré l'adoption du télétravail, bouleversant ainsi nos habitudes de travail. Mais le télétravail est-il une solution durable ? Quels sont ses avantages et ses inconvénients ? Cet article analyse les impacts du télétravail sur la productivité, la santé mentale, les relations sociales et l'équilibre vie professionnelle/vie personnelle...</p>
+                <p>La pandémie de Covid-19 a accéléré l'adoption du télétravail, bouleversant ainsi nos habitudes de travail...</p>
             </div>
         </div>
 
@@ -221,10 +214,10 @@
     <script>
         function displayContent(section) {
             const content = {
-                profil: "<h2>Profil</h2><p>Je suis un professionnel passionné...</p>",
-                formations: "<h2>Formations</h2><p>J'ai suivi des formations...</p>",
-                experience: "<h2>Expérience</h2><p>Mon parcours professionnel...</p>",
-                interets: "<h2>Centres d'intérêt</h2><p>Mes passions incluent...</p>"
+                profil: "<h2>Profil</h2><p>Voici des informations sur votre profil.</p>",
+                formations: "<h2>Formations</h2><p>Voici la liste de vos formations.</p>",
+                experience: "<h2>Expériences</h2><p>Voici vos expériences professionnelles.</p>",
+                interets: "<h2>Centres d'intérêt</h2><p>Voici vos centres d'intérêt.</p>"
             };
             document.getElementById("dynamic-content").innerHTML = content[section] || "";
         }
