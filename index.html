@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Info Entreprise</title>
+    <title>Aide Info Entreprise</title>
     <style>
         body {
             font-family: 'Inria Sans', sans-serif;
-            margin: 0;
             padding: 0;
             display: flex;
             height: 100vh;
-            background-color: #f4f4f4;
-            overflow: hidden;
+            color: #f4f4f4;
+            overflow: hidden; /* Pour éviter le défilement indésirable */
         }
-
+        /* Style pour le titre principal */
         h1 {
             color: #1E90FF;
             font-size: 50px;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
             margin-top: 20px;
             text-align: center;
-            width: 100%;
+            width: 100%; /* Centrer le titre */
         }
-
+        /* Style du logo */
         .logo {
             display: block;
             margin: 20px auto;
             width: 100px;
-            animation: fadeIn 2s;
+            animation: fadeIn 2s; /* Animation d'apparition */
         }
-
+        /* Style de la barre latérale gauche */
         .sidebar {
             width: 200px;
-            height: 100vh;
+            height: 100vh; /* Pleine hauteur */
             background-color: #333;
             display: flex;
             flex-direction: column;
@@ -42,7 +41,6 @@
             padding: 20px;
             box-sizing: border-box;
         }
-
         .sidebar a {
             color: white;
             text-decoration: none;
@@ -53,179 +51,206 @@
             width: 100%;
             box-sizing: border-box;
             margin: 5px 0;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; /* Transition pour un effet plus fluide */
         }
-
         .sidebar a img {
             width: 20px;
             height: 20px;
             margin-right: 10px;
         }
-
         .sidebar a:hover {
             background-color: #575757;
         }
-
+        /* Style du conteneur principal */
         .main-content {
             flex-grow: 1;
             padding: 20px;
             text-align: center;
-            background-color: white;
-            height: 100vh;
-            overflow: auto;
-            position: relative;
+            background-color: white; /* Couleur blanche pour le contenu principal */
+            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
+            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
+            position: relative; /* Pour la position du texte dynamique */
         }
-
+        /* Style du GIF */
         .gif-container {
             margin-top: 20px;
-            animation: slideIn 1s;
+            animation: slideIn 1s; /* Animation d'entrée pour le GIF */
         }
-
         .gif-container img {
-            width: 80%;
-            max-width: 600px;
+            width: 80%; /* Ajustement de la taille du GIF */
+            max-width: 600px; /* Limite la largeur pour un meilleur rendu */
             height: auto;
             object-fit: cover;
         }
-
+        /* Style des boutons d'action en bas */
         .button-container {
             margin-top: 20px;
             display: flex;
             justify-content: center;
         }
-
         .button-container a {
             text-decoration: none;
             color: white;
-            background-color: #1E90FF;
+            background-color: #1E90FF; /* Bleu courtois */
             padding: 15px 30px;
             border-radius: 10px;
             font-size: 18px;
             margin: 10px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; /* Transition pour les boutons */
         }
-
         .button-container a:hover {
             background-color: #1c86ee;
         }
-
+        /* Style de la bannière */
         .banner {
             background-color: #333;
-            width: 100%;
+            width: 100%; /* Pleine largeur */
             padding: 10px;
             display: flex;
             justify-content: space-around;
             align-items: center;
             position: relative;
         }
-
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         @keyframes slideIn {
             from { transform: translateY(-20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
+        /* Styles pour les articles */
         .article {
             border: 1px solid #ccc;
             border-radius: 8px;
             margin: 15px;
             padding: 15px;
             background-color: #fafafa;
-            transition: transform 0.3s;
-            text-align: left;
+            transition: transform 0.3s; /* Transition pour un effet de zoom */
+            text-align: left; /* Alignement du texte à gauche */
+            display: flex;
+            flex-direction: row;
         }
-
         .article:hover {
-            transform: scale(1.02);
+            transform: scale(1.02); /* Zoom léger au survol */
         }
-
         .article img {
-            max-width: 100%;
+            max-width: 100%; /* S'assurer que les images ne débordent pas */
             height: auto;
-            border-radius: 5px;
+            border-radius: 5px; /* Coins arrondis pour les images */
+            width: 40%; /* Ajustement de la largeur pour l'image */
+        }
+        .article-content {
+            width: 60%; /* Ajustement de la largeur pour le texte */
+            padding-left: 10px; /* Espace entre l'image et le texte */
+        }
+        /* Style pour la section d'introduction */
+        .intro {
+            margin-bottom: 30px;
+            text-align: left; /* Alignement à gauche pour l'introduction */
+        }
+        .intro h2 {
+            margin-bottom: 10px; /* Espace sous le titre de l'introduction */
         }
     </style>
 </head>
 <body>
-
     <!-- Barre latérale gauche -->
     <div class="sidebar">
         <a href="#profil" onclick="displayContent('profil')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil">
-            Profil
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Profil"> Profil
         </a>
         <a href="#formations" onclick="displayContent('formations')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3197/3197967.png" alt="Formations">
-            Formations
+            <img src="https://cdn-icons-png.flaticon.com/512/3197/3197967.png" alt="Formations"> Formations
         </a>
         <a href="#experience" onclick="displayContent('experience')">
-            <img src="https://cdn-icons-png.flaticon.com/512/8078/8078678.png" alt="Expérience">
-            Expérience
+            <img src="https://cdn-icons-png.flaticon.com/512/8078/8078678.png" alt="Expérience"> Expérience
         </a>
         <a href="#interets" onclick="displayContent('interets')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt">
-            Centres d'intérêt
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Centres d'intérêt"> Centres d'intérêt
         </a>
     </div>
-
     <!-- Conteneur principal -->
     <div class="main-content">
         <!-- Logo au-dessus du titre -->
-        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo Information">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Informations sur le logo">
         <!-- Titre sur la page -->
         <h1>Bienvenue dans Help Info Entreprise</h1>
+        <!-- Conteneur du GIF -->
+        <div class="gif-container">
+            <img src="https://cdn.pixabay.com/animation/2022/09/27/12/02/12-02-19-627_512.gif" alt="GIF sur la technologie">
+        </div>
+        <!-- Contenu dynamique -->
+        <div id="dynamic-content">
+            <!-- Contenu affiché dynamiquement ici -->
+        </div>
 
-        <!-- Contenu texte ajouté avant les articles -->
-        <div class="intro-content">
+        <!-- Texte d'introduction -->
+        <div class="intro">
             <h2>💼🎯 Accueil</h2>
             <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
-            <p><a href="#">[En savoir plus]</a></p>
-
+            <p>[En savoir plus]</p>
             <h2>📊🚀 Notre Mission</h2>
             <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
-            <p><a href="#">[Découvrez notre approche]</a></p>
-
-            <h2>💡🛠️ Nos Services</h2>
+            <p>[Découvrez notre approche]</p>
+            <h2>💡🛠️ Nos services</h2>
+            <p>Nous offrons une large gamme de services dédiés aux entreprises, qu'elles soient petites, moyennes ou grandes :</p>
             <ul>
-                <li>✅🔍 <strong>Audit Stratégique de l'Information</strong>: Analyse complète des flux d'information internes et externes, détection des inefficacités et recommandations pour optimiser les systèmes d'information.</li>
-                <li>💻🛠️ <strong>Implémentation de Solutions SI</strong>: Mise en place d'outils technologiques pour une gestion efficace des données (ERP, CRM, etc.), intégration de l'IA et du Big Data.</li>
-                <li>📑🔒 <strong>Conseil en Gouvernance de l'Information</strong>: Élaboration de stratégies de gouvernance, conformité aux régulations, gestion des risques et cybersécurité.</li>
-                <li>🎓📈 <strong>Formation et Accompagnement au Changement</strong>: Formation des équipes et assistance dans la transformation numérique.</li>
+                <li>✅🔍 Audit Stratégique de l'Information : Analyse complète des flux d'information internes et externes.</li>
+                <li>💻🛠️ Implémentation de Solutions SI (Systèmes d'Information) : Mise en place d'outils technologiques pour une gestion efficace des données.</li>
+                <li>📑🔒 Conseil en Gouvernance de l'Information : Élaboration de stratégies de gouvernance de l'information.</li>
+                <li>📈📊 Analyse des Données et Reporting : Création de tableaux de bord et d'analyses pour un suivi optimal des performances.</li>
             </ul>
-            <p><a href="#">[Découvrez tous nos services]</a></p>
-
-            <h2>🤔✅ Pourquoi Nous Choisir ?</h2>
-            <ul>
-                <li>🧠💼 <strong>Expertise Étendue</strong>: Expérience riche dans plusieurs secteurs (finance, santé, technologie, etc.).</li>
-                <li>🎯🎯 <strong>Solutions Personnalisées</strong>: Adaptées aux besoins et objectifs spécifiques de chaque entreprise.</li>
-                <li>💡⚙️ <strong>Innovation Technologique</strong>: Utilisation des technologies les plus récentes.</li>
-                <li>🤝📊 <strong>Accompagnement Global</strong>: Suivi de chaque étape, du diagnostic à l'implémentation.</li>
-            </ul>
-            <p><a href="#">[En savoir plus sur notre expertise]</a></p>
-
-            <h2>💬🗣️ Témoignages de Clients</h2>
-            <p><strong>XYZ Banque</strong>: « Grâce à Help Info Entreprise, nous avons amélioré notre gestion des informations clients et augmenté notre productivité de 20% en seulement six mois. »</p>
-            <p><strong>GlobalTech</strong>: « L'équipe de Help Info Entreprise a révolutionné notre gestion des données, avec une approche stratégique qui a changé notre manière de travailler. »</p>
-
-            <h2>🌟🔮 Notre Vision d'Avenir</h2>
-            <p>Chez Help Info Entreprise, nous croyons que l'information est une ressource clé pour la compétitivité des entreprises. Notre ambition est de devenir leader en solutions de gestion stratégique de l'information.</p>
-            <p><a href="#">[Nos ambitions]</a></p>
-
-            <h2>📞📧 Contactez-nous</h2>
-            <p><strong>Siège Social</strong>: 10 rue de l'Innovation, 75001 Paris, France</p>
-            <p><strong>Email</strong>: contact@helpinfoentreprise.fr</p>
-            <p><strong>Téléphone</strong>: +33 1 23 45 67 89</p>
+            <p>[Explorez nos services]</p>
         </div>
 
-        <!-- Contenu des articles -->
-        <div class="article-section">
-            <!-- Articles insérés ici -->
+        <!-- Section d'articles -->
+        <h2>📰 Articles Récents</h2>
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Image de l'article 1">
+            <div class="article-content">
+                <h3>Titre de l'Article 1</h3>
+                <p>Ce premier article traite de l'importance de la gestion de l'information dans les entreprises modernes.</p>
+                <p><a href="#article1">Lire plus</a></p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Image de l'article 1">
+            <div class="article-content">
+                <h3>Titre de l'Article 1</h3>
+                <p>Ce premier article traite de l'importance de la gestion de l'information dans les entreprises modernes.</p>
+                <p><a href="#article1">Lire plus</a></p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Image de l'article 2">
+            <div class="article-content">
+                <h3>Titre de l'Article 2</h3>
+                <p>Ce deuxième article explore des stratégies efficaces pour optimiser la gestion des données.</p>
+                <p><a href="#article2">Lire plus</a></p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="https://via.placeholder.com/150" alt="Image de l'article 2">
+            <div class="article-content">
+                <h3>Titre de l'Article 2</h3>
+                <p>Ce deuxième article explore des stratégies efficaces pour optimiser la gestion des données.</p>
+                <p><a href="#article2">Lire plus</a></p>
+            </div>
+        </div>
+
+        <!-- Conteneur pour les boutons d'action -->
+        <div class="button-container">
+            <a href="#contact">Contactez-nous</a>
+            <a href="#services">Nos services</a>
         </div>
     </div>
-
+    <script>
+        function displayContent(section) {
+            const dynamicContent = document.getElementById('dynamic-content');
+            dynamicContent.innerHTML = '<h2>' + section + '</h2><p>Contenu pour ' + section + '</p>';
+        }
+    </script>
 </body>
 </html>
