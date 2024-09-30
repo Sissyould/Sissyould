@@ -10,8 +10,9 @@
             padding: 0;
             display: flex;
             height: 100vh;
-            color: #f4f4f4;
+            color: #000; /* Texte noir pour une meilleure visibilité */
             overflow: hidden; /* Pour éviter le défilement indésirable */
+            background-color: #f4f4f4; /* Couleur de fond pour un contraste */
         }
         /* Style pour le titre principal */
         h1 {
@@ -183,74 +184,23 @@
         </div>
         <!-- Contenu dynamique -->
         <div id="dynamic-content">
-            <!-- Contenu affiché dynamiquement ici -->
-        </div>
-
-        <!-- Texte d'introduction -->
-        <div class="intro">
-            <h2>💼🎯 Accueil</h2>
-            <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
-            <p>[En savoir plus]</p>
-            <h2>📊🚀 Notre Mission</h2>
-            <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
-            <p>[Découvrez notre approche]</p>
-            <h2>💡🛠️ Nos services</h2>
-            <p>Nous offrons une large gamme de services dédiés aux entreprises, qu'elles soient petites, moyennes ou grandes :</p>
-            <ul>
-                <li>✅🔍 Audit Stratégique de l'Information : Analyse complète des flux d'information internes et externes.</li>
-                <li>💻🛠️ Implémentation de Solutions SI (Systèmes d'Information) : Mise en place d'outils technologiques pour une gestion efficace des données.</li>
-                <li>📑🔒 Conseil en Gouvernance de l'Information : Élaboration de stratégies de gouvernance de l'information.</li>
-                <li>📈📊 Analyse des Données et Reporting : Création de tableaux de bord et d'analyses pour un suivi optimal des performances.</li>
-            </ul>
-            <p>[Explorez nos services]</p>
-        </div>
-
-        <!-- Section d'articles -->
-        <h2>📰 Articles Récents</h2>
-        <div class="article">
-            <img src="https://via.placeholder.com/150" alt="Image de l'article 1">
-            <div class="article-content">
-                <h3>Titre de l'Article 1</h3>
-                <p>Ce premier article traite de l'importance de la gestion de l'information dans les entreprises modernes.</p>
-                <p><a href="#article1">Lire plus</a></p>
+            <div class="intro">
+                <h2>💼🎯 Accueil</h2>
+                <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
+                <p>[En savoir plus]</p>
+                <h2>📊🚀 Notre Mission</h2>
+                <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
+                <p>[Découvrez notre approche]</p>
+                <h2>💡🛠️ Nos services</h2>
+                <p>Nous offrons une large gamme de services dédiés aux entreprises, qu'elles soient petites, moyennes ou grandes :</p>
+                <ul>
+                    <li>✅🔍 Audit Stratégique de l'Information : Analyse complète des flux d'information internes et externes.</li>
+                    <li>💻🛠️ Implémentation de Solutions SI (Systèmes d'Information) : Mise en place d'outils technologiques pour une gestion efficace des données.</li>
+                    <li>📑🔒 Conseil en Gouvernance de l'Information : Élaboration de stratégies adaptées pour la protection et la valorisation de vos données.</li>
+                    <li>🧠📈 Formations et Ateliers : Sensibilisation et formation des équipes à la gestion de l'information.</li>
+                </ul>
             </div>
-        </div>
-        <div class="article">
-            <img src="https://via.placeholder.com/150" alt="Image de l'article 1">
-            <div class="article-content">
-                <h3>Titre de l'Article 1</h3>
-                <p>Ce premier article traite de l'importance de la gestion de l'information dans les entreprises modernes.</p>
-                <p><a href="#article1">Lire plus</a></p>
-            </div>
-        </div>
-        <div class="article">
-            <img src="https://via.placeholder.com/150" alt="Image de l'article 2">
-            <div class="article-content">
-                <h3>Titre de l'Article 2</h3>
-                <p>Ce deuxième article explore des stratégies efficaces pour optimiser la gestion des données.</p>
-                <p><a href="#article2">Lire plus</a></p>
-            </div>
-        </div>
-        <div class="article">
-            <img src="https://via.placeholder.com/150" alt="Image de l'article 2">
-            <div class="article-content">
-                <h3>Titre de l'Article 2</h3>
-                <p>Ce deuxième article explore des stratégies efficaces pour optimiser la gestion des données.</p>
-                <p><a href="#article2">Lire plus</a></p>
-            </div>
-        </div>
-
-        <!-- Conteneur pour les boutons d'action -->
-        <div class="button-container">
-            <a href="#contact">Contactez-nous</a>
-            <a href="#services">Nos services</a>
         </div>
     </div>
-    <script>
-        function displayContent(section) {
-            const dynamicContent = document.getElementById('dynamic-content');
-            dynamicContent.innerHTML = '<h2>' + section + '</h2><p>Contenu pour ' + section + '</p>';
-        }
-    </script>
 </body>
 </html>
