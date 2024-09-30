@@ -10,33 +10,30 @@
             margin: 0;
             padding: 0;
             display: flex;
-            height: 100vh; /* Assurer que le corps prend toute la hauteur de la fenêtre */
+            height: 100vh;
             background-color: #f4f4f4;
-            overflow: hidden; /* Pour éviter le défilement indésirable */
+            overflow: hidden;
         }
 
-        /* Style pour le titre principal */
         h1 {
-            color: #1E90FF; /* Bleu courtois */
+            color: #1E90FF;
             font-size: 50px;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             margin-top: 20px;
             text-align: center;
-            width: 100%; /* Centrer le titre */
+            width: 100%;
         }
 
-        /* Style du logo */
         .logo {
             display: block;
             margin: 20px auto;
             width: 100px;
-            animation: fadeIn 2s; /* Animation d'apparition */
+            animation: fadeIn 2s;
         }
 
-        /* Style de la barre latérale gauche */
         .sidebar {
             width: 200px;
-            height: 100vh; /* Pleine hauteur */
+            height: 100vh;
             background-color: #333;
             display: flex;
             flex-direction: column;
@@ -56,7 +53,7 @@
             width: 100%;
             box-sizing: border-box;
             margin: 5px 0;
-            transition: background-color 0.3s; /* Transition pour un effet plus fluide */
+            transition: background-color 0.3s;
         }
 
         .sidebar a img {
@@ -69,31 +66,28 @@
             background-color: #575757;
         }
 
-        /* Style du conteneur principal */
         .main-content {
             flex-grow: 1;
             padding: 20px;
             text-align: center;
-            background-color: white; /* Couleur blanche pour le contenu principal */
-            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
-            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
-            position: relative; /* Pour la position du texte dynamique */
+            background-color: white;
+            height: 100vh;
+            overflow: auto;
+            position: relative;
         }
 
-        /* Style du GIF */
         .gif-container {
             margin-top: 20px;
-            animation: slideIn 1s; /* Animation d'entrée pour le GIF */
+            animation: slideIn 1s;
         }
 
         .gif-container img {
-            width: 80%; /* Ajustement de la taille du GIF */
-            max-width: 600px; /* Limite la largeur pour un meilleur rendu */
+            width: 80%;
+            max-width: 600px;
             height: auto;
             object-fit: cover;
         }
 
-        /* Style des boutons d'action en bas */
         .button-container {
             margin-top: 20px;
             display: flex;
@@ -103,22 +97,21 @@
         .button-container a {
             text-decoration: none;
             color: white;
-            background-color: #1E90FF; /* Bleu courtois */
+            background-color: #1E90FF;
             padding: 15px 30px;
             border-radius: 10px;
             font-size: 18px;
             margin: 10px;
-            transition: background-color 0.3s; /* Transition pour les boutons */
+            transition: background-color 0.3s;
         }
 
         .button-container a:hover {
             background-color: #1c86ee;
         }
 
-        /* Style de la bannière */
         .banner {
             background-color: #333;
-            width: 100%; /* Pleine largeur */
+            width: 100%;
             padding: 10px;
             display: flex;
             justify-content: space-around;
@@ -126,7 +119,6 @@
             position: relative;
         }
 
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -137,25 +129,24 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
-        /* Styles pour les articles */
         .article {
             border: 1px solid #ccc;
             border-radius: 8px;
             margin: 15px;
             padding: 15px;
             background-color: #fafafa;
-            transition: transform 0.3s; /* Transition pour un effet de zoom */
-            text-align: left; /* Alignement du texte à gauche */
+            transition: transform 0.3s;
+            text-align: left;
         }
 
         .article:hover {
-            transform: scale(1.02); /* Zoom léger au survol */
+            transform: scale(1.02);
         }
 
         .article img {
-            max-width: 100%; /* S'assurer que les images ne débordent pas */
+            max-width: 100%;
             height: auto;
-            border-radius: 5px; /* Coins arrondis pour les images */
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -188,68 +179,53 @@
         <!-- Titre sur la page -->
         <h1>Bienvenue dans Help Info Entreprise</h1>
 
-        <!-- Conteneur du GIF -->
-        <div class="gif-container">
-            <img src="https://cdn.pixabay.com/animation/2022/09/27/12/02/12-02-19-627_512.gif" alt="GIF sur la technologie">
+        <!-- Contenu texte ajouté avant les articles -->
+        <div class="intro-content">
+            <h2>💼🎯 Accueil</h2>
+            <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
+            <p><a href="#">[En savoir plus]</a></p>
+
+            <h2>📊🚀 Notre Mission</h2>
+            <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
+            <p><a href="#">[Découvrez notre approche]</a></p>
+
+            <h2>💡🛠️ Nos Services</h2>
+            <ul>
+                <li>✅🔍 <strong>Audit Stratégique de l'Information</strong>: Analyse complète des flux d'information internes et externes, détection des inefficacités et recommandations pour optimiser les systèmes d'information.</li>
+                <li>💻🛠️ <strong>Implémentation de Solutions SI</strong>: Mise en place d'outils technologiques pour une gestion efficace des données (ERP, CRM, etc.), intégration de l'IA et du Big Data.</li>
+                <li>📑🔒 <strong>Conseil en Gouvernance de l'Information</strong>: Élaboration de stratégies de gouvernance, conformité aux régulations, gestion des risques et cybersécurité.</li>
+                <li>🎓📈 <strong>Formation et Accompagnement au Changement</strong>: Formation des équipes et assistance dans la transformation numérique.</li>
+            </ul>
+            <p><a href="#">[Découvrez tous nos services]</a></p>
+
+            <h2>🤔✅ Pourquoi Nous Choisir ?</h2>
+            <ul>
+                <li>🧠💼 <strong>Expertise Étendue</strong>: Expérience riche dans plusieurs secteurs (finance, santé, technologie, etc.).</li>
+                <li>🎯🎯 <strong>Solutions Personnalisées</strong>: Adaptées aux besoins et objectifs spécifiques de chaque entreprise.</li>
+                <li>💡⚙️ <strong>Innovation Technologique</strong>: Utilisation des technologies les plus récentes.</li>
+                <li>🤝📊 <strong>Accompagnement Global</strong>: Suivi de chaque étape, du diagnostic à l'implémentation.</li>
+            </ul>
+            <p><a href="#">[En savoir plus sur notre expertise]</a></p>
+
+            <h2>💬🗣️ Témoignages de Clients</h2>
+            <p><strong>XYZ Banque</strong>: « Grâce à Help Info Entreprise, nous avons amélioré notre gestion des informations clients et augmenté notre productivité de 20% en seulement six mois. »</p>
+            <p><strong>GlobalTech</strong>: « L'équipe de Help Info Entreprise a révolutionné notre gestion des données, avec une approche stratégique qui a changé notre manière de travailler. »</p>
+
+            <h2>🌟🔮 Notre Vision d'Avenir</h2>
+            <p>Chez Help Info Entreprise, nous croyons que l'information est une ressource clé pour la compétitivité des entreprises. Notre ambition est de devenir leader en solutions de gestion stratégique de l'information.</p>
+            <p><a href="#">[Nos ambitions]</a></p>
+
+            <h2>📞📧 Contactez-nous</h2>
+            <p><strong>Siège Social</strong>: 10 rue de l'Innovation, 75001 Paris, France</p>
+            <p><strong>Email</strong>: contact@helpinfoentreprise.fr</p>
+            <p><strong>Téléphone</strong>: +33 1 23 45 67 89</p>
         </div>
 
-        <!-- Contenu dynamique -->
-        <div id="dynamic-content">
-            <!-- Contenu affiché dynamiquement ici -->
-        </div>
-
-        <!-- Articles Section -->
-        <div id="articles-section">
-            <h2>Articles</h2>
-            <div class="article">
-                <img src="https://www.google.com/imgres?q=image%20gratuit%20sur%20innovation%20&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fti%2Fphotos-gratuite%2Fp1%2F3327376-ampoule-incandescente-en-idee-innovation-et-inspiration-concept-gratuit-photo.jpg&imgrefurl=https%3A%2F%2Ffr.vecteezy.com%2Fphotos-gratuite%2Finnovation&docid=mhaW_n_g4ROTGM&tbnid=-xCMU91hAjapFM&vet=12ahUKEwi5_MaQ2OCIAxWMcKQEHUwuFl8QM3oECBkQAA..i&w=1960&h=980&hcb=2&ved=2ahUKEwi5_MaQ2OCIAxWMcKQEHUwuFl8QM3oECBkQAA" alt="Article sur l'IA et le travail">
-                <h3>Technologie</h3>
-                <h4>L'IA révolutionne le monde du travail : une étude approfondie</h4>
-                <p>L'intelligence artificielle s'immisce de plus en plus dans notre quotidien, transformant radicalement les méthodes de travail. Une récente étude révèle que 80% des entreprises ont déjà intégré des outils d'IA dans leurs processus. Mais quelles sont les réelles conséquences de cette révolution ? Les avantages sont nombreux : automatisation des tâches répétitives, prise de décision plus rapide et plus précise, amélioration de la productivité. Cependant, l'IA soulève également des questions éthiques et sociales. La disparition de certains emplois, le risque de biais algorithmiques et la dépendance croissante aux machines sont autant de défis à relever. Cet article explore en profondeur les impacts de l'IA sur le monde du travail, en s'appuyant sur les témoignages d'experts et les résultats de diverses recherches.</p>
-                <p><strong>Mots-clés :</strong> intelligence artificielle, travail, automatisation, éthique, étude</p>
-            </div>
-            <div class="article">
-                <img src="https://cdn.pixabay.com/photo/2020/07/22/20/38/education-4511366_1280.jpg" alt="Article sur la technologie éducative">
-                <h3>Éducation</h3>
-                <h4>Comment la technologie transforme l'éducation moderne</h4>
-                <p>La technologie éducative connaît un essor sans précédent, apportant des outils innovants pour l'apprentissage. Des plateformes d'apprentissage en ligne aux applications interactives, les étudiants bénéficient d'une personnalisation accrue de leurs parcours d'apprentissage. De plus, les enseignants peuvent désormais accéder à des ressources pédagogiques variées et adaptées. Toutefois, cette transformation nécessite également une réflexion sur l'égalité d'accès à ces outils technologiques, et sur l'importance de l'accompagnement pédagogique dans cette transition. Cet article se penche sur les avantages et les défis de la technologie dans l'éducation.</p>
-                <p><strong>Mots-clés :</strong> éducation, technologie, apprentissage, égalité, ressources</p>
-            </div>
-        </div>
-
-        <!-- Conteneur pour les boutons d'action -->
-        <div class="button-container">
-            <a href="#contact" onclick="displayContent('contact')">Contactez-nous</a>
-            <a href="#services" onclick="displayContent('services')">Nos services</a>
+        <!-- Contenu des articles -->
+        <div class="article-section">
+            <!-- Articles insérés ici -->
         </div>
     </div>
 
-    <script>
-        function displayContent(section) {
-            const contentDiv = document.getElementById('dynamic-content');
-            switch(section) {
-                case 'profil':
-                    contentDiv.innerHTML = '<h2>Profil</h2><p>Voici les détails de votre profil.</p>';
-                    break;
-                case 'formations':
-                    contentDiv.innerHTML = '<h2>Formations</h2><p>Voici vos formations.</p>';
-                    break;
-                case 'experience':
-                    contentDiv.innerHTML = '<h2>Expérience</h2><p>Voici votre expérience professionnelle.</p>';
-                    break;
-                case 'interets':
-                    contentDiv.innerHTML = '<h2>Centres d\'intérêt</h2><p>Voici vos centres d\'intérêt.</p>';
-                    break;
-                case 'contact':
-                    contentDiv.innerHTML = '<h2>Contactez-nous</h2><p>Voici nos coordonnées.</p>';
-                    break;
-                case 'services':
-                    contentDiv.innerHTML = '<h2>Nos services</h2><p>Voici les services que nous proposons.</p>';
-                    break;
-                default:
-                    contentDiv.innerHTML = '<h2>Section non trouvée</h2>';
-            }
-        }
-    </script>
 </body>
 </html>
