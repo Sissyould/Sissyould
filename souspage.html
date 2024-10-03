@@ -31,6 +31,17 @@
             width: 120px;
         }
 
+        .banner {
+            background-color: white;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
         .video-container {
             margin: 30px 0;
             width: 90%;
@@ -128,62 +139,135 @@
             margin-bottom: 10px;
             font-size: 22px;
         }
+
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+        }
     </style>
 </head>
 
 <body>
 
-    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo de l'entreprise">
-
-    <h1>Bienvenue sur Aide Info Entreprise</h1>
-
-    <!-- Vidéo d'accueil -->
-    <div class="video-container">
-        <video autoplay muted loop>
-            <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/Help%20info%20entreprise.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Banniere avec sidebar -->
+    <div class="banner">
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Logo de l'entreprise">
+        <h1>Aide Info Entreprise</h1>
     </div>
 
-    <!-- Section d'introduction -->
-    <div class="intro">
-        <h2>💼🎯 Accueil</h2>
-        <p>Bienvenue chez Help Info Entreprise. Nous sommes votre partenaire de confiance dans la gestion de l'information et des données. Notre expertise aide les entreprises à structurer, optimiser et valoriser leurs informations pour améliorer leur prise de décision et leur performance.</p>
-
-        <h2>📊🚀 Notre Mission</h2>
-        <p>Nous nous engageons à transformer vos données en actifs précieux, permettant ainsi des prises de décisions plus stratégiques et des opérations plus efficaces. Nos solutions personnalisées aident à structurer, analyser et exploiter vos informations.</p>
+    <!-- Barre latérale gauche -->
+    <div class="sidebar">
+        <a href="auditindex.html" onclick="displayContent('audit')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Audit Stratégique de l'Information"> 🕵️‍♂️ Audit Stratégique de l'Information
+        </a>
+        <a href="souspage.html" onclick="displayContent('solutions-si')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Implémentation de Solutions SI"> 💻 Implémentation de Solutions SI
+        </a>
+        <a href="#conseil-gouvernance" onclick="displayContent('conseil-gouvernance')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Conseil en Gouvernance de l'Information"> 🛡️ Conseil en Gouvernance de l'Information
+        </a>
+        <a href="#formations-ateliers" onclick="displayContent('formations-ateliers')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Formations et Ateliers"> 🎓 Formations et Ateliers
+        </a>
+        <a href="#strategies-optimisation" onclick="displayContent('strategies-optimisation')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📊 Stratégies d'Optimisation des Données
+        </a>
     </div>
 
-    <!-- Section des services -->
-    <div class="services">
-        <h2>💡🛠️ Nos services</h2>
-        <ul>
-            <li>✅🔍 Audit Stratégique de l'Information</li>
-            <li>💻🛠️ Implémentation de Solutions SI</li>
-            <li>📑🔒 Conseil en Gouvernance de l'Information</li>
-            <li>🧠📈 Formations et Ateliers</li>
-            <li>📊 Stratégies d'Optimisation des Données</li>
-        </ul>
-    </div>
+    <!-- Contenu principal -->
+    <div class="main-content">
 
-    <!-- Section des articles -->
-    <div class="articles-section">
-        <h2>📰 Articles</h2>
+        <!-- Vidéo d'accueil -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/Help%20info%20entreprise.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-        <div class="article">
-            <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
-            <div class="article-content">
-                <h3>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h3>
-                <p>Découvrez comment l'intelligence artificielle améliore l'analyse des données pour une prise de décision plus rapide et plus précise dans les entreprises.</p>
+        <!-- Section d'introduction -->
+        <div class="intro">
+            <h2>💼🎯 Accueil</h2>
+            <p>Bienvenue chez Help Info Entreprise. Nous sommes votre partenaire de confiance dans la gestion de l'information et des données. Notre expertise aide les entreprises à structurer, optimiser et valoriser leurs informations pour améliorer leur prise de décision et leur performance.</p>
+
+            <h2>📊🚀 Notre Mission</h2>
+            <p>Nous nous engageons à transformer vos données en actifs précieux, permettant ainsi des prises de décisions plus stratégiques et des opérations plus efficaces. Nos solutions personnalisées aident à structurer, analyser et exploiter vos informations.</p>
+        </div>
+
+        <!-- Section des services -->
+        <div class="services">
+            <h2>💡🛠️ Nos services</h2>
+            <ul>
+                <li>✅🔍 Audit Stratégique de l'Information</li>
+                <li>💻🛠️ Implémentation de Solutions SI</li>
+                <li>📑🔒 Conseil en Gouvernance de l'Information</li>
+                <li>🧠📈 Formations et Ateliers</li>
+                <li>📊 Stratégies d'Optimisation des Données</li>
+            </ul>
+        </div>
+
+        <!-- Section des articles -->
+        <div class="articles-section">
+            <h2>📰 Articles</h2>
+
+            <div class="article">
+                <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-science-des-donnees.jpeg" alt="Article 1">
+                <div class="article-content">
+                    <h3>📊 Introduction à la Science des Données</h3>
+                    <p>Découvrez les fondamentaux de la science des données, une discipline en pleine expansion qui transforme les entreprises en améliorant leur efficacité et en boostant la prise de décision.</p>
+                </div>
+            </div>
+
+            <div class="article">
+                <img src="https://cdn0.4d.com/sites/default/files/image/2019-09/4D-business-intelligence.png" alt="Article 2">
+                <div class="article-content">
+                    <h3>📈 L'Importance de la Business Intelligence</h3>
+                    <p>La Business Intelligence aide les entreprises à mieux comprendre leurs processus et à exploiter leurs données pour des décisions plus éclairées et stratégiques.</p>
+                </div>
             </div>
         </div>
 
-        <div class="article">
-            <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
-            <div class="article-content">
-                <h3>Article 2 : La Blockchain pour la Sécurisation des Données</h3>
-                <p>La blockchain permet une nouvelle approche pour sécuriser les données. Grâce à sa structure décentralisée, elle renforce l'intégrité et la transparence des informations.</p>
-            </div>
+        <!-- Section d'appel à l'action -->
+        <div class="button-container">
+            <a href="#contact">Contactez-nous</a>
+            <a href="#services">Découvrir plus</a>
         </div>
     </div>
 
