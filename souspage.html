@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/Sissyould/Sissyould/refs/heads/main/Sans%20titre.png" sizes="30x30" type="image/png">
+    <title>Aide Info Entreprise</title>
+    <style>
+        body {
+            font-family: 'Inria Sans', sans-serif;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            color: #000; /* Texte noir pour une meilleure visibilité */
+            overflow: hidden; /* Pour éviter le défilement indésirable */
+            background-color: #f4f4f4; /* Couleur de fond pour un contraste */
+        }
+        /* Style pour le titre principal */
+        h1 {
+            color: #1E90FF;
+            font-size: 50px;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
+            margin-top: 20px;
+            text-align: center;
+            width: 100%; /* Centrer le titre */
+        }
+        /* Style du logo */
+        .logo {
+            display: block;
+            margin: 20px auto;
+            width: 100px;
+            animation: fadeIn 2s; /* Animation d'apparition */
+        }
+        /* Style de la barre latérale gauche */
+        .sidebar {
+            width: 200px;
+            height: 100vh; /* Pleine hauteur */
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 5px 0;
+            transition: background-color 0.3s; /* Transition pour un effet plus fluide */
+        }
+        .sidebar a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        /* Style du conteneur principal */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: white; /* Couleur blanche pour le contenu principal */
+            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
+            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
+            position: relative; /* Pour la position du texte dynamique */
+        }
+        /* Style du GIF */
+        .gif-container {
+            margin-top: 20px;
+            animation: slideIn 1s; /* Animation d'entrée pour le GIF */
+        }
+        .gif-container img {
+            width: 80%; /* Ajustement de la taille du GIF */
+            max-width: 600px; /* Limite la largeur pour un meilleur rendu */
+            height: auto;
+            object-fit: cover;
+        }
+        /* Style des boutons d'action en bas */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #1E90FF; /* Bleu courtois */
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            margin: 10px;
+            transition: background-color 0.3s; /* Transition pour les boutons */
+        }
+        .button-container a:hover {
+            background-color: #1c86ee;
+        }
+       /* Style de la bannière */
+    .banner {
+        background-color: white; /* Couleur blanche pour la bannière */
+        width: 100%; /* Pleine largeur */
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+    }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Styles pour les articles */
+        .article {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #fafafa;
+            transition: transform 0.3s; /* Transition pour un effet de zoom */
+            text-align: left; /* Alignement du texte à gauche */
+            display: flex;
+            flex-direction: row;
+        }
+        .article:hover {
+            transform: scale(1.02); /* Zoom léger au survol */
+        }
+        .article img {
+            max-width: 100%; /* S'assurer que les images ne débordent pas */
+            height: auto;
+            border-radius: 5px; /* Coins arrondis pour les images */
+            width: 40%; /* Ajustement de la largeur pour l'image */
+        }
+        .article-content {
+            width: 60%; /* Ajustement de la largeur pour le texte */
+            padding-left: 10px; /* Espace entre l'image et le texte */
+        }
+        /* Style pour la section d'introduction */
+        .intro {
+            margin-bottom: 30px;
+            text-align: left; /* Alignement à gauche pour l'introduction */
+        }
+        .intro h2 {
+            margin-bottom: 10px; /* Espace sous le titre de l'introduction */
+        }
+        /* Style pour le titre des articles */
+        .articles-title {
+            margin: 30px 0;
+            font-size: 30px; /* Taille du titre */
+            color: #1E90FF; /* Couleur du titre */
+            text-align: center; /* Centrer le titre */
+        }
+        /* Ajout d'espacement entre les paragraphes */
+        p {
+            line-height: 1.5; /* Espacement de 1,5 entre les lignes de texte */
+            margin: 10px 0; /* Espacement vertical supplémentaire entre les paragraphes */
+        }
+    </style>
+</head>
+<body>
+ <!-- Barre latérale gauche -->
+<div class="sidebar">
+    <a href="auditindex.html" onclick="displayContent('audit')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Audit Stratégique de l'Information"> 🕵️‍♂️ Audit Stratégique de l'Information
+    </a>
+    <a href="#solutions-si" onclick="displayContent('solutions-si')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Implémentation de Solutions SI"> 💻 Implémentation de Solutions SI
+    </a>
+    <a href="#conseil-gouvernance" onclick="displayContent('conseil-gouvernance')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Conseil en Gouvernance de l'Information"> 🛡️ Conseil en Gouvernance de l'Information
+    </a>
+    <a href="#formations-ateliers" onclick="displayContent('formations-ateliers')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Formations et Ateliers"> 🎓 Formations et Ateliers
+    </a>
+    <a href="#strategies-optimisation" onclick="displayContent('strategies-optimisation')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📊 Stratégies d'Optimisation des Données
+    </a>
+    <a href="#tendances-technologiques" onclick="displayContent('tendances-technologiques')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Tendances Technologiques en Gestion de l'Information"> 🚀 Tendances Technologiques en Gestion de l'Information
+    </a>
+</div>
+    <!-- Conteneur principal -->
+    <div class="main-content">
+        <!-- Logo au-dessus du titre -->
+        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Informations sur le logo">
+        <!-- Titre sur la page -->
+        <h1>Bienvenue dans Help Info Entreprise</h1>
+        <!-- Conteneur du GIF -->
+        <div class="gif-container">
+            <img src="https://cdn.pixabay.com/animation/2022/09/27/12/02/12-02-19-627_512.gif" alt="GIF sur la technologie">
+        </div>
+        <!-- Contenu dynamique -->
+        <div id="dynamic-content">
+            <div class="intro">
+                <h2>💼🎯 Accueil</h2>
+                <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
+                </p>
+                <h2>📊🚀 Notre Mission</h2>
+                <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
+                </p>
+                <h2>💡🛠️ Nos services</h2>
+                <p>Nous offrons une large gamme de services dédiés aux entreprises, qu'elles soient petites, moyennes ou grandes :</p>
+                <ul>
+                    <li>✅🔍 Audit Stratégique de l'Information : Analyse complète des flux d'information internes et externes.</li>
+                    <li>💻🛠️ Implémentation de Solutions SI (Systèmes d'Information) : Mise en place d'outils technologiques pour une gestion efficace des données.</li>
+                    <li>📑🔒 Conseil en Gouvernance de l'Information : Élaboration de stratégies adaptées pour la protection et la valorisation de vos données.</li>
+                    <li>🧠📈 Formations et Ateliers : Sensibilisation et formation des équipes à la gestion de l'information.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Titre des articles -->
+        <h2 class="articles-title">📰 Articles</h2>
+        <!-- Articles sur l'innovation -->
+        <div class="article">
+            <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
+            <div class="article-content">
+                <h2>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h2>
+                <p>L'intégration de l'intelligence artificielle dans les systèmes d'information révolutionne la manière dont les entreprises analysent leurs données. Cette innovation permet une prise de décision plus rapide et précise, optimisant ainsi les performances organisationnelles.</p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
+            <div class="article-content">
+                <h2>Article 2 : La Blockchain pour la Sécurisation des Données</h2>
+                <p>La technologie blockchain offre une nouvelle approche pour sécuriser les données au sein des systèmes d'information. Grâce à sa structure décentralisée, elle garantit l'intégrité et la transparence des informations, réduisant ainsi les risques de fraudes.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
