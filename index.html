@@ -15,21 +15,11 @@
             overflow: hidden; /* Pour éviter le défilement indésirable */
             background-color: #f4f4f4; /* Couleur de fond pour un contraste */
         }
-        /* Style pour le titre principal */
-        h1 {
-            color: #1E90FF;
-            font-size: 50px;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Police style dessin animé */
-            margin-top: 20px;
-            text-align: center;
-            width: 100%; /* Centrer le titre */
-        }
-        /* Style du logo */
-        .logo {
-            display: block;
-            margin: 20px auto;
-            width: 100px;
-            animation: fadeIn 2s; /* Animation d'apparition */
+        /* Supprimer les marges globales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         /* Style de la barre latérale gauche */
         .sidebar {
@@ -43,7 +33,7 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        .sidebar a {
+       .sidebar a {
             color: white;
             text-decoration: none;
             font-size: 16px;
@@ -51,54 +41,48 @@
             align-items: center;
             padding: 10px;
             width: 100%;
-            box-sizing: border-box;
             margin: 5px 0;
-            transition: background-color 0.3s; /* Transition pour un effet plus fluide */
+            transition: background-color 0.3s;
         }
+
         .sidebar a img {
             width: 20px;
             height: 20px;
             margin-right: 10px;
         }
+
         .sidebar a:hover {
             background-color: #575757;
         }
+
         /* Style du conteneur principal */
         .main-content {
             flex-grow: 1;
-            padding: 20px;
             text-align: center;
             background-color: white; /* Couleur blanche pour le contenu principal */
-            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
-            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
-            position: relative; /* Pour la position du texte dynamique */
+            overflow: auto; /* Pour permettre le défilement du contenu */
         }
-        /* Style du conteneur vidéo */
+
+        /* Style du conteneur vidéo pour pleine largeur */
         .video-container {
-            width: 100%; /* Pleine largeur */
-            height: calc(100vh - 220px); /* Ajustez en fonction de votre besoin */
-            overflow: hidden; /* Évite le débordement si nécessaire */
-            position: relative; /* Pour s'assurer que les éléments enfants sont positionnés correctement */
-            margin-top: 20px; /* Espace au-dessus de la vidéo */
+            width: calc(100vw - 200px); /* Pleine largeur moins la largeur de la barre latérale */
+            height: 50vh; /* Hauteur à 50% de la fenêtre */
+            overflow: hidden;
+            position: relative;
         }
+
         .video-container video {
-            width: 100%; /* Pleine largeur */
-            height: 100%; /* Pleine hauteur */
+            width: 100%; /* Vidéo prend toute la largeur disponible */
+            height: 100%; /* Vidéo prend toute la hauteur */
+            object-fit: contain; /* Afficher toute la vidéo sans la couper */
         }
-        /* Style du GIF */
-        .gif-container {
-            margin-top: 20px;
-            animation: slideIn 1s; /* Animation d'entrée pour le GIF */
+
+     /* Styles pour le contenu dynamique */
+        .intro, .mission, .articles {
+            padding: 20px;
+            text-align: left;
         }
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+        
         /* Styles pour les articles */
         .article {
             border: 1px solid #ccc;
@@ -126,6 +110,11 @@
         }
         /* Style pour la section d'introduction */
         .intro {
+            margin-bottom: 30px;
+            text-align: left; /* Alignement à gauche pour l'introduction */
+        }
+        /* Style pour la section mission */
+        .mission {
             margin-bottom: 30px;
             text-align: left; /* Alignement à gauche pour l'introduction */
         }
@@ -162,18 +151,13 @@
             <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📚 Documentation
         </a>
     </div>
-    
-    <!-- Conteneur principal -->
-    <div class="main-content">
-        <!-- Logo au-dessus du titre -->
-        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Informations sur le logo">
-        <!-- Titre sur la page -->
-        <h1>Bienvenue dans Help Info Entreprise</h1>
         
+       <!-- Conteneur principal -->
+    <div class="main-content">
         <!-- Conteneur de la vidéo -->
         <div class="video-container">
-            <video controls autoplay muted>
-                <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SV00.mp4"> <!-- Remplacez par le lien de votre vidéo -->
+            <video autoplay muted loop>
+                <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SV00.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge la vidéo.
             </video>
         </div>
