@@ -10,28 +10,25 @@
             font-family: 'Inria Sans', sans-serif;
             padding: 0;
             margin: 0;
-            display: flex;
             height: 100vh;
-            color: #000; /* Texte noir pour une meilleure visibilité */
-            background-color: #f4f4f4; /* Couleur de fond pour un contraste */
+            color: #000;
+            background-color: #f4f4f4;
         }
 
-        /* Supprimer les marges globales */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Style de la barre latérale gauche */
+        /* Barre latérale gauche */
         .sidebar {
             width: 200px;
-            height: 100vh; /* Pleine hauteur */
             background-color: #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
             padding: 20px;
         }
 
@@ -39,106 +36,57 @@
             color: white;
             text-decoration: none;
             font-size: 16px;
-            display: flex;
-            align-items: center;
             padding: 10px;
-            width: 100%;
             margin: 5px 0;
+            display: block;
             transition: background-color 0.3s;
-        }
-
-        .sidebar a img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
         }
 
         .sidebar a:hover {
             background-color: #575757;
         }
 
-        /* Style du conteneur principal */
+        /* Conteneur principal sans marge */
         .main-content {
-            flex-grow: 1;
-            text-align: center;
-            background-color: white; /* Couleur blanche pour le contenu principal */
-            overflow: auto; /* Pour permettre le défilement du contenu */
+            margin-left: 200px; /* Décalage à droite de la largeur de la barre latérale */
+            padding: 0;
+            height: 100vh;
         }
 
-        /* Style du conteneur vidéo pour pleine largeur */
+        /* Vidéo occupe toute la largeur et hauteur du conteneur principal */
         .video-container {
-            width: calc(100vw - 200px); /* Pleine largeur moins la largeur de la barre latérale */
-            height: 50vh; /* Hauteur à 50% de la fenêtre */
+            width: calc(100%); /* Toute la largeur de la page moins la barre */
+            height: 100%; /* Toute la hauteur disponible */
             overflow: hidden;
             position: relative;
         }
 
         .video-container video {
-            width: 100%; /* Vidéo prend toute la largeur disponible */
-            height: 100%; /* Vidéo prend toute la hauteur */
-            object-fit: contain; /* Afficher toute la vidéo sans la couper */
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Afficher toute la vidéo sans couper */
         }
 
-        /* Styles pour le contenu dynamique */
-        .intro, .mission, .articles {
+        /* Styles pour les autres sections */
+        .content {
             padding: 20px;
-            text-align: left;
+            background-color: white;
         }
 
-        .articles-title {
-            font-size: 30px;
+        h2 {
             color: #1E90FF;
-            text-align: center;
         }
-
-        /* Style des articles */
-        .article {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            margin: 15px 0;
-            padding: 15px;
-            background-color: #fafafa;
-            transition: transform 0.3s;
-            display: flex;
-        }
-
-        .article:hover {
-            transform: scale(1.02);
-        }
-
-        .article img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            width: 40%; /* Ajustement de la largeur pour l'image */
-        }
-
-        .article-content {
-            width: 60%;
-            padding-left: 10px; /* Espace entre l'image et le texte */
-        }
-
     </style>
 </head>
 <body>
 
     <!-- Barre latérale gauche -->
     <div class="sidebar">
-        <a href="auditindex.html" onclick="displayContent('audit')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Audit Stratégique de l'Information"> 🕵️‍♂️ Audit Stratégique de l'Information
-        </a>
-        <a href="souspage2.html" onclick="displayContent('solutions-si')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Implémentation de Solutions SI"> 💻 Implémentation de Solutions SI
-        </a>
-        <a href="souspage03.html" onclick="displayContent('conseil-gouvernance')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Conseil en Gouvernance de l'Information"> 🛡️ Conseil en Gouvernance de l'Information
-        </a>
-        <a href="#formations-ateliers" onclick="displayContent('formations-ateliers')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Formations et Ateliers"> 🎓 Formations et Ateliers
-        </a>
-        <a href="Documentation" onclick="displayContent('Documentation')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📚 Documentation
-        </a>
+        <a href="#">🕵️‍♂️ Audit Stratégique</a>
+        <a href="#">💻 Implémentation SI</a>
+        <a href="#">🛡️ Gouvernance Info</a>
+        <a href="#">🎓 Formations</a>
+        <a href="#">📚 Documentation</a>
     </div>
 
     <!-- Conteneur principal -->
@@ -151,37 +99,16 @@
             </video>
         </div>
 
-        <!-- Contenu dynamique -->
-        <div id="dynamic-content">
-            <section class="intro">
-                <h2>💼🎯 Accueil</h2>
-                <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
-            </section>
+        <!-- Autres sections après la vidéo -->
+        <div class="content">
+            <h2>💼🎯 Accueil</h2>
+            <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information...</p>
 
-            <section class="mission">
-                <h2>📊🚀 Notre Mission</h2>
-                <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données concrètes.</p>
-            </section>
-
-            <section class="articles">
-                <h2 class="articles-title">📰 Articles récents</h2>
-                <div class="article">
-                    <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
-                    <div class="article-content">
-                        <h2>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h2>
-                        <p>L'intégration de l'intelligence artificielle dans les systèmes d'information révolutionne la manière dont les entreprises analysent leurs données. Cette innovation permet une prise de décision plus rapide et précise, optimisant ainsi les performances organisationnelles.</p>
-                    </div>
-                </div>
-                <div class="article">
-                    <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
-                    <div class="article-content">
-                        <h2>Article 2 : La Blockchain pour la Sécurisation des Données</h2>
-                        <p>La technologie blockchain offre une nouvelle approche pour sécuriser les données au sein des systèmes d'information. Grâce à sa structure décentralisée, elle garantit l'intégrité et la transparence des informations, réduisant ainsi les risques de fraudes.</p>
-                    </div>
-                </div>
-            </section>
+            <h2>📊🚀 Notre Mission</h2>
+            <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance...</p>
         </div>
     </div>
 
 </body>
 </html>
+
