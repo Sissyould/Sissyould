@@ -66,16 +66,16 @@
 
         /* Style du conteneur vidéo pour pleine largeur */
         .video-container {
-            width: calc(100vw - 200px); /* Pleine largeur moins la largeur de la barre latérale */
-            height: 50vh; /* Hauteur à 50% de la fenêtre */
+            width: 100vw; /* Vidéo occupe toute la largeur de la fenêtre */
+            height: 100vh; /* Vidéo occupe toute la hauteur de la fenêtre */
             overflow: hidden;
             position: relative;
         }
 
         .video-container video {
-            width: 100%; /* Vidéo prend toute la largeur disponible */
-            height: 100%; /* Vidéo prend toute la hauteur */
-            object-fit: contain; /* Afficher toute la vidéo sans la couper */
+            width: 100vw; /* Vidéo prend toute la largeur disponible */
+            height: 100vh; /* Vidéo prend toute la hauteur */
+            object-fit: contain; /* Affiche toute la vidéo sans découpe */
         }
 
      /* Styles pour le contenu dynamique */
@@ -155,12 +155,12 @@
         
        <!-- Conteneur principal -->
     <div class="main-content">
-        <!-- Conteneur de la vidéo -->
-        <div class="video-container">
-            <video autoplay muted loop>
-                <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SV00.mp4" type="video/mp4">
-                Votre navigateur ne prend pas en charge la vidéo.
-            </video>
+       <!-- Conteneur de la vidéo -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SV00.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la vidéo.
+        </video>
         </div>
 
         <!-- Contenu dynamique -->
