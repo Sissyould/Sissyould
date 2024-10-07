@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://raw.githubusercontent.com/Sissyould/Sissyould/refs/heads/main/Sans%20titre.png" sizes="30x30" type="image/png">
     <title>Aide Info Entreprise</title>
     <style>
@@ -103,16 +103,16 @@
         .button-container a:hover {
             background-color: #1c86ee;
         }
-       /* Style de la bannière */
-    .banner {
-        background-color: white; /* Couleur blanche pour la bannière */
-        width: 100%; /* Pleine largeur */
-        padding: 10px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-    }
+        /* Style de la bannière */
+        .banner {
+            background-color: white; /* Couleur blanche pour la bannière */
+            width: 100%; /* Pleine largeur */
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -170,49 +170,56 @@
     </style>
 </head>
 <body>
- <!-- Barre latérale gauche -->
-<div class="sidebar">
-    <a href="auditindex.html" onclick="displayContent('audit')">
-        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Audit Stratégique de l'Information"> 🕵️‍♂️ Audit Stratégique de l'Information
-    </a>
-    <a href="souspage2.html" onclick="displayContent('solutions-si')">
-        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Implémentation de Solutions SI"> 💻 Implémentation de Solutions SI
-    </a>
-    <a href="souspage03.html" onclick="displayContent('conseil-gouvernance')">
-        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Conseil en Gouvernance de l'Information"> 🛡️ Conseil en Gouvernance de l'Information
-    </a>
-    <a href="#formations-ateliers" onclick="displayContent('formations-ateliers')">
-        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Formations et Ateliers"> 🎓 Formations et Ateliers
-    </a>
-    <a href="#strategies-optimisation" onclick="displayContent('strategies-optimisation')">
-        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📊 Stratégies d'Optimisation des Données
-    </a>
-    <a href="#tendances-technologiques" onclick="displayContent('tendances-technologiques')">
-        <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Tendances Technologiques en Gestion de l'Information"> 🚀 Tendances Technologiques en Gestion de l'Information
-    </a>
-</div>
+    <!-- Barre latérale gauche -->
+    <div class="sidebar">
+        <a href="auditindex.html" onclick="displayContent('audit')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Audit Stratégique de l'Information"> 🕵️‍♂️ Audit Stratégique de l'Information
+        </a>
+        <a href="souspage2.html" onclick="displayContent('solutions-si')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Implémentation de Solutions SI"> 💻 Implémentation de Solutions SI
+        </a>
+        <a href="souspage03.html" onclick="displayContent('conseil-gouvernance')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Conseil en Gouvernance de l'Information"> 🛡️ Conseil en Gouvernance de l'Information
+        </a>
+        <a href="#formations-ateliers" onclick="displayContent('formations-ateliers')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Formations et Ateliers"> 🎓 Formations et Ateliers
+        </a>
+        <a href="#strategies-optimisation" onclick="displayContent('strategies-optimisation')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📊 Stratégies d'Optimisation des Données
+        </a>
+        <a href="#tendances-technologiques" onclick="displayContent('tendances-technologiques')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Tendances Technologiques en Gestion de l'Information"> 🚀 Tendances Technologiques en Gestion de l'Information
+        </a>
+    </div>
+    
     <!-- Conteneur principal -->
     <div class="main-content">
         <!-- Logo au-dessus du titre -->
         <img class="logo" src="https://cdn-icons-png.flaticon.com/512/1076/1076337.png" alt="Informations sur le logo">
         <!-- Titre sur la page -->
         <h1>Bienvenue dans Help Info Entreprise</h1>
+        
         <!-- Conteneur de la vidéo -->
         <div class="video-container">
-            <video controls>
+            <video controls autoplay muted>
                 <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SP3v0.mp4"> <!-- Remplacez par le lien de votre vidéo -->
                 Votre navigateur ne prend pas en charge la vidéo.
             </video>
         </div>
+
         <!-- Contenu dynamique -->
         <div id="dynamic-content">
-            <div class="intro">
+            <section class="intro">
                 <h2>💼🎯 Accueil</h2>
                 <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
-                </p>
+            </section>
+            
+            <section class="mission">
                 <h2>📊🚀 Notre Mission</h2>
                 <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
-                </p>
+            </section>
+
+            <section class="services">
                 <h2>💡🛠️ Nos services</h2>
                 <p>Nous offrons une large gamme de services dédiés aux entreprises, qu'elles soient petites, moyennes ou grandes :</p>
                 <ul>
@@ -221,22 +228,25 @@
                     <li>📑🔒 Conseil en Gouvernance de l'Information : Élaboration de stratégies adaptées pour la protection et la valorisation de vos données.</li>
                     <li>🧠📈 Formations et Ateliers : Sensibilisation et formation des équipes à la gestion de l'information.</li>
                 </ul>
-            </div>
+            </section>
         </div>
+
         <!-- Titre des articles -->
         <h2 class="articles-title">📰 Articles</h2>
+        
         <!-- Articles sur l'innovation -->
         <div class="article">
             <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
             <div class="article-content">
-                <h2>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h2>
+                <h3>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h3>
                 <p>L'intégration de l'intelligence artificielle dans les systèmes d'information révolutionne la manière dont les entreprises analysent leurs données. Cette innovation permet une prise de décision plus rapide et précise, optimisant ainsi les performances organisationnelles.</p>
             </div>
         </div>
+
         <div class="article">
             <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
             <div class="article-content">
-                <h2>Article 2 : La Blockchain pour la Sécurisation des Données</h2>
+                <h3>Article 2 : La Blockchain pour la Sécurisation des Données</h3>
                 <p>La technologie blockchain offre une nouvelle approche pour sécuriser les données au sein des systèmes d'information. Grâce à sa structure décentralisée, elle garantit l'intégrité et la transparence des informations, réduisant ainsi les risques de fraudes.</p>
             </div>
         </div>
