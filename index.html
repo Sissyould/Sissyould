@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/Sissyould/Sissyould/refs/heads/main/Sans%20titre.png" sizes="30x30" type="image/png">
     <title>Aide Info Entreprise</title>
     <style>
         body {
@@ -10,21 +11,20 @@
             padding: 0;
             display: flex;
             height: 100vh;
-            color: #000;
-            overflow: hidden;
-            background-color: #f4f4f4;
+            color: #000; /* Texte noir pour une meilleure visibilité */
+            overflow: hidden; /* Pour éviter le défilement indésirable */
+            background-color: #f4f4f4; /* Couleur de fond pour un contraste */
         }
-        /* Style pour les titres */
+        /* Style pour les titres en bleu et justifiés */
         h2 {
             color: #1E90FF;
             font-size: 30px;
             text-align: justify;
-            margin-bottom: 20px;
         }
         /* Style de la barre latérale gauche */
         .sidebar {
             width: 200px;
-            height: 100vh;
+            height: 100vh; /* Pleine hauteur */
             background-color: #333;
             display: flex;
             flex-direction: column;
@@ -43,7 +43,7 @@
             width: 100%;
             box-sizing: border-box;
             margin: 5px 0;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s; /* Transition pour un effet plus fluide */
         }
         .sidebar a img {
             width: 20px;
@@ -58,73 +58,77 @@
             flex-grow: 1;
             padding: 20px;
             text-align: center;
-            background-color: white;
-            height: 100vh;
-            overflow: auto;
-            position: relative;
+            background-color: white; /* Couleur blanche pour le contenu principal */
+            height: 100vh; /* Pleine hauteur pour aligner avec la barre latérale */
+            overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
+            position: relative; /* Pour la position du texte dynamique */
         }
         /* Style du conteneur vidéo */
         .video-container {
-            width: 100%;
-            height: calc(100vh - 220px);
-            overflow: hidden;
-            position: relative;
-            margin-top: 20px;
+            width: 100%; /* Pleine largeur */
+            height: calc(100vh - 220px); /* Ajustez en fonction de votre besoin */
+            overflow: hidden; /* Évite le débordement si nécessaire */
+            position: relative; /* Pour s'assurer que les éléments enfants sont positionnés correctement */
+            margin-top: 20px; /* Espace au-dessus de la vidéo */
         }
         .video-container video {
-            width: 100%;
-            height: 100%;
+            width: 100%; /* Pleine largeur */
+            height: 100%; /* Pleine hauteur */
         }
-        /* Styles pour les sections */
-        section {
-            display: none;
-        }
-        section.active {
-            display: block;
-        }
-        /* Style pour les articles */
+        /* Style des articles */
         .article {
             border: 1px solid #ccc;
             border-radius: 8px;
             margin: 15px;
             padding: 15px;
             background-color: #fafafa;
-            transition: transform 0.3s;
-            text-align: left;
+            transition: transform 0.3s; /* Transition pour un effet de zoom */
+            text-align: left; /* Alignement du texte à gauche */
             display: flex;
             flex-direction: row;
         }
         .article:hover {
-            transform: scale(1.02);
+            transform: scale(1.02); /* Zoom léger au survol */
         }
         .article img {
-            max-width: 100%;
+            max-width: 100%; /* S'assurer que les images ne débordent pas */
             height: auto;
-            border-radius: 5px;
-            width: 40%;
+            border-radius: 5px; /* Coins arrondis pour les images */
+            width: 40%; /* Ajustement de la largeur pour l'image */
         }
         .article-content {
-            width: 60%;
-            padding-left: 10px;
+            width: 60%; /* Ajustement de la largeur pour le texte */
+            padding-left: 10px; /* Espace entre l'image et le texte */
+        }
+        /* Style pour la section d'introduction */
+        .intro {
+            margin-bottom: 30px;
+            text-align: left; /* Alignement à gauche pour l'introduction */
         }
         /* Ajout d'espacement entre les paragraphes */
         p {
-            line-height: 1.5;
-            margin: 10px 0;
+            line-height: 1.5; /* Espacement de 1,5 entre les lignes de texte */
+            margin: 10px 0; /* Espacement vertical supplémentaire entre les paragraphes */
         }
     </style>
 </head>
 <body>
     <!-- Barre latérale gauche -->
     <div class="sidebar">
-        <a href="#accueil" onclick="displayContent('accueil')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Accueil"> 💼🎯 Accueil
+        <a href="auditindex.html" onclick="displayContent('audit')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Audit Stratégique de l'Information"> 🕵️‍♂️ Audit Stratégique de l'Information
         </a>
-        <a href="#mission" onclick="displayContent('mission')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Notre Mission"> 📊🚀 Notre Mission
+        <a href="souspage2.html" onclick="displayContent('solutions-si')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Implémentation de Solutions SI"> 💻 Implémentation de Solutions SI
         </a>
-        <a href="#articles" onclick="displayContent('articles')">
-            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Articles Récents"> 📰 Articles récents
+        <a href="souspage03.html" onclick="displayContent('conseil-gouvernance')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Conseil en Gouvernance de l'Information"> 🛡️ Conseil en Gouvernance de l'Information
+        </a>
+        <a href="#formations-ateliers" onclick="displayContent('formations-ateliers')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Formations et Ateliers"> 🎓 Formations et Ateliers
+        </a>
+        <a href="Documentation" onclick="displayContent('Documentation')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3588/3588658.png" alt="Stratégies d'Optimisation des Données"> 📚 Documentation
         </a>
     </div>
     
@@ -133,50 +137,41 @@
         <!-- Conteneur de la vidéo -->
         <div class="video-container">
             <video controls autoplay muted>
-                <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SV00.mp4">
+                <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SV00.mp4"> <!-- Remplacez par le lien de votre vidéo -->
                 Votre navigateur ne prend pas en charge la vidéo.
             </video>
         </div>
 
         <!-- Contenu dynamique -->
         <div id="dynamic-content">
-            <section id="accueil" class="active">
+            <section class="intro">
                 <h2>💼🎯 Accueil</h2>
                 <p>Bienvenue chez Help Info Entreprise. Votre allié incontournable pour la gestion de l'information. Nous accompagnons les entreprises de tous secteurs dans l'optimisation de leur gestion des données afin de favoriser une prise de décision éclairée et d'améliorer l'efficacité organisationnelle grâce à des stratégies d'information avancées.</p>
             </section>
 
-            <section id="mission">
+            <section class="mission">
                 <h2>📊🚀 Notre Mission</h2>
                 <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données concrètes.</p>
             </section>
 
-            <section id="articles">
+            <section class="articles">
                 <h2>📰 Articles récents</h2>
-                <div class="article">
-                    <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
-                    <div class="article-content">
-                        <h2>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h2>
-                        <p>L'intégration de l'intelligence artificielle dans les systèmes d'information révolutionne la manière dont les entreprises analysent leurs données. Cette innovation permet une prise de décision plus rapide et précise, optimisant ainsi les performances organisationnelles.</p>
-                    </div>
-                </div>
-                <div class="article">
-                    <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
-                    <div class="article-content">
-                        <h2>Article 2 : La Blockchain pour la Sécurisation des Données</h2>
-                        <p>La technologie blockchain offre une nouvelle approche pour sécuriser les données au sein des systèmes d'information. Grâce à sa structure décentralisée, elle garantit l'intégrité et la transparence des informations, réduisant ainsi les risques de fraudes.</p>
-                    </div>
+        <div class="article">
+            <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
+            <div class="article-content">
+                <h2>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h2>
+                <p>L'intégration de l'intelligence artificielle dans les systèmes d'information révolutionne la manière dont les entreprises analysent leurs données. Cette innovation permet une prise de décision plus rapide et précise, optimisant ainsi les performances organisationnelles.</p>
+            </div>
+        </div>
+        <div class="article">
+            <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
+            <div class="article-content">
+                <h2>Article 2 : La Blockchain pour la Sécurisation des Données</h2>
+                <p>La technologie blockchain offre une nouvelle approche pour sécuriser les données au sein des systèmes d'information. Grâce à sa structure décentralisée, elle garantit l'intégrité et la transparence des informations, réduisant ainsi les risques de fraudes.</p>
+            </div>
                 </div>
             </section>
         </div>
     </div>
-
-    <script>
-        function displayContent(section) {
-            document.querySelectorAll('section').forEach(function(sec) {
-                sec.classList.remove('active');
-            });
-            document.getElementById(section).classList.add('active');
-        }
-    </script>
 </body>
 </html>
