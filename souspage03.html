@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 
 <head>
@@ -45,13 +45,16 @@
         .video-container {
             margin: 30px 0;
             width: 100%;
+            height: 400px; /* Définir une hauteur fixe pour toutes les vidéos */
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* S'assurer que le débordement soit caché */
         }
 
         .video-container video {
             width: 100%;
-            height: auto;
+            height: 100%; /* Hauteur de 100% pour s'adapter à son conteneur */
+            object-fit: cover; /* Ajuster la vidéo pour couvrir le conteneur */
             border-radius: 10px;
         }
 
@@ -152,23 +155,35 @@
     </section>
 
     <!-- Section Meilleures Pratiques -->
-    <section class="best-practices">
-         <video autoplay muted loop>
+    <section class="best-practices video-container">
+        <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/Help%20info%20entreprise.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise vidéo.
         </video>
     </section>
-    
 
     <!-- Section Comment Nous Aidons -->
-    <section class="how-we-help">
-         <video autoplay muted loop>
+    <section class="how-we-help video-container">
+        <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/Help%20info%20entreprise.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise vidéo.
         </video>
     </section>
 
     <!-- Section Conclusion -->
+    <section class="conclusion">
+        <h2>Conclusion 🎯</h2>
+        <p>Investir dans une gouvernance des données solide n'est pas seulement une obligation réglementaire, mais également un atout stratégique pour toute entreprise. En protégeant et en valorisant vos informations, vous garantissez la durabilité et la croissance de votre organisation. Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à renforcer votre gouvernance de l'information. ✉️</p>
+    </section>
+
+    <!-- Section des articles -->
+    <section class="articles-section">
+        <div class="button-container">
+            <a href="#">Contactez-nous</a>
+            <a href="#">En savoir plus</a>
+        </div>
+    </section>
+     <!-- Section Conclusion -->
     <section class="conclusion">
         <h2>Conclusion 🎯</h2>
         <p>Investir dans une gouvernance des données solide n'est pas seulement une obligation réglementaire, mais également un atout stratégique pour toute entreprise. En protégeant et en valorisant vos informations, vous garantissez la durabilité et la croissance de votre organisation. Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à renforcer votre gouvernance de l'information. ✉️</p>
@@ -183,6 +198,25 @@
         </div>
     </section>
 
+    <script>
+        // Sélectionner tous les conteneurs vidéo
+        const videoContainers = document.querySelectorAll('.video-container video');
+
+        // Ajouter un écouteur d'événements pour la souris
+        videoContainers.forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                video.pause(); // Mettre en pause la vidéo lorsque la souris passe dessus
+            });
+
+            video.addEventListener('mouseleave', () => {
+                video.play(); // Reprendre la vidéo lorsque la souris s'éloigne
+            });
+        });
+    </script>
+
 </body>
 
 </html>
+
+
+   
