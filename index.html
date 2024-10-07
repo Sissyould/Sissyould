@@ -62,19 +62,20 @@
             background-color: white; /* Couleur blanche pour le contenu principal */
             overflow: auto; /* Pour permettre le défilement du contenu */
         }
+/* Style du conteneur vidéo pour pleine largeur */
+.video-container {
+    width: 100%; /* Vidéo occupe toute la largeur de la fenêtre */
+    height: auto; /* Hauteur auto pour garder le ratio */
+    overflow: hidden;
+    position: relative; /* Pour le positionnement absolu de la vidéo */
+}
 
-        /* Style du conteneur vidéo pour pleine largeur */
-        .video-container {
-            width: 100vw; /* Vidéo occupe toute la largeur de la fenêtre */
-            height: 100vh; /* Vidéo occupe toute la hauteur de la fenêtre */
-            overflow: hidden;
-        }
+.video-container video {
+    width: 100%; /* Vidéo prend toute la largeur disponible */
+    height: auto; /* Hauteur auto pour garder le ratio */
+    object-fit: cover; /* Remplit la zone sans déformation */
+}
 
-        .video-container video {
-            width: 100vw; /* Vidéo prend toute la largeur disponible */
-            height: 90vh; /* Vidéo prend toute la hauteur */
-            object-fit: contain; /* Affiche toute la vidéo sans découpe */
-        }
 
      /* Styles pour le contenu dynamique */
         .intro, .mission, .articles {
