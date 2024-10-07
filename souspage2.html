@@ -32,22 +32,7 @@
             width: 120px;
         }
 
-        .video-container {
-            margin: 30px 0;
-            width: 90%;
-            max-width: 800px;
-        }
-
-        .video-container video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .intro,
-        .services,
-        .articles-section {
+        section {
             width: 90%;
             max-width: 800px;
             background-color: white;
@@ -57,9 +42,20 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .intro h2,
-        .services h2,
-        .articles-section h2 {
+        .video-container {
+            margin: 30px 0;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h2 {
             color: #1E90FF;
             font-size: 28px;
             margin-bottom: 15px;
@@ -140,21 +136,20 @@
 
     <h1>🌐 Implémentation de Solutions SI (Systèmes d'Information) 🌐</h1>
 
-    <!-- Vidéo d'accueil -->
-    <div class="video-container">
+    <!-- Section Vidéo d'accueil -->
+    <section class="video-container">
         <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/Help%20info%20entreprise.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise vidéo.
         </video>
-    </div>
+    </section>
 
     <!-- Section d'introduction -->
-    <div class="intro">
-        <h2>💼 Introduction :</h2>
+    <section class="intro">
+        <h2>💼🎯 Introduction :</h2>
         <p> Dans un monde de plus en plus connecté, les systèmes d'information sont au cœur de la gestion des entreprises. Ils permettent d'optimiser les processus internes, de mieux gérer les données, et d'améliorer la prise de décision. Notre expertise vous accompagne tout au long de l'implémentation de vos solutions SI pour garantir une transition fluide et une performance accrue.</p>
 
-        <!-- Section de nos solution SI -->
-        <h2>🔧 Nos Solutions SI 🔧</h2>
+        <h2>📊🔧 Nos Solutions SI 🔧</h2>
         <ul>
             <li>📊 <strong>ERP (Enterprise Resource Planning)</strong><br>
                 Automatisez la gestion de vos opérations internes. Grâce à l'ERP, intégrez tous vos processus clés (finance, RH, logistique) dans une seule solution centralisée, améliorant ainsi la communication et la productivité de votre entreprise.
@@ -172,20 +167,19 @@
                 Simplifiez la gestion de vos documents. Organisez, stockez et récupérez facilement vos documents importants. Une solution d'EDM vous permet de gagner du temps et de réduire les erreurs liées à la gestion manuelle des fichiers.
             </li>
         </ul>
-    </div>
+    </section>
 
     <!-- Section des services -->
-    <div class="services">
-        <h2>🛠️ Nos services</h2>
+    <section class="services">
+        <h2>💡🛠️ Nos services</h2>
         <ul>
             <li>✅🔍 Audit Stratégique de l'Information</li>
             <li>💻🛠️ Implémentation de Solutions SI</li>
             <li>📑🔒 Conseil en Gouvernance de l'Information</li>
             <li>🧠📈 Formations et Ateliers</li>
-            <li>📊💡 Stratégies d'Optimisation des Données</li>
+            <li>📊 Stratégies d'Optimisation des Données</li>
         </ul>
 
-         <!-- Section d'Implémentation -->
         <h2>🛠️ Étapes d’Implémentation</h2>
         <ul>
             <li>📋 <strong>Audit des Besoins</strong> : Nous commençons par analyser vos besoins spécifiques pour comprendre vos défis et objectifs.</li>
@@ -194,8 +188,10 @@
             <li>📚 <strong>Formation des Utilisateurs</strong> : Nous formons vos équipes pour garantir une utilisation optimale des nouveaux outils.</li>
             <li>🔧 <strong>Support Post-Implémentation</strong> : Après le déploiement, nous restons à vos côtés avec un service de support pour résoudre tout problème et maximiser la performance de votre système.</li>
         </ul>
+    </section>
 
-         <!-- Section des avantages d'une bonne gestion des systèmes d'information -->
+    <!-- Section Avantages -->
+    <section class="advantages">
         <h2>🎯 Les Avantages d'une Bonne Gestion des Systèmes d'Information</h2>
         <ul>
             <li>⏱️ <strong>Gain de Temps</strong> : Automatisation des tâches répétitives, réduction des erreurs manuelles.</li>
@@ -203,8 +199,10 @@
             <li>📊 <strong>Meilleure Productivité</strong> : Collaboration facilitée entre les départements et optimisation des processus.</li>
             <li>🔐 <strong>Sécurité Renforcée</strong> : Protection de vos données sensibles grâce à des outils de gestion sécurisés.</li>
         </ul>
+    </section>
 
-         <!-- Section pourquoi nous choisir? -->
+    <!-- Section Pourquoi Nous Choisir -->
+    <section class="why-us">
         <h2>🚀 Pourquoi Nous Choisir ?</h2>
         <p>En choisissant nos services, vous bénéficiez de :</p>
         <ul>
@@ -212,12 +210,16 @@
             <li>💼 <strong>Des solutions personnalisées</strong> qui répondent à vos besoins spécifiques.</li>
             <li>🤝 <strong>Un accompagnement complet</strong> de la conception à la mise en place, avec un support continu.</li>
         </ul>
+    </section>
+
+    <!-- Section des articles -->
 
         <div class="button-container">
             <a href="#">Contactez-nous</a>
             <a href="#">En savoir plus</a>
         </div>
-    </div>
+    </section>
+    
 </body>
 
 </html>
