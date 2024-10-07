@@ -73,45 +73,22 @@
             overflow: auto; /* Gérer le débordement si le contenu est plus grand que la fenêtre */
             position: relative; /* Pour la position du texte dynamique */
         }
+        /* Style du conteneur vidéo */
+        .video-container {
+            width: 100%; /* Pleine largeur */
+            height: calc(100vh - 220px); /* Ajustez en fonction de votre besoin */
+            overflow: hidden; /* Évite le débordement si nécessaire */
+            position: relative; /* Pour s'assurer que les éléments enfants sont positionnés correctement */
+            margin-top: 20px; /* Espace au-dessus de la vidéo */
+        }
+        .video-container video {
+            width: 100%; /* Pleine largeur */
+            height: 100%; /* Pleine hauteur */
+        }
         /* Style du GIF */
         .gif-container {
             margin-top: 20px;
             animation: slideIn 1s; /* Animation d'entrée pour le GIF */
-        }
-        .gif-container img {
-            width: 80%; /* Ajustement de la taille du GIF */
-            max-width: 600px; /* Limite la largeur pour un meilleur rendu */
-            height: auto;
-            object-fit: cover;
-        }
-        /* Style des boutons d'action en bas */
-        .button-container {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .button-container a {
-            text-decoration: none;
-            color: white;
-            background-color: #1E90FF; /* Bleu courtois */
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            margin: 10px;
-            transition: background-color 0.3s; /* Transition pour les boutons */
-        }
-        .button-container a:hover {
-            background-color: #1c86ee;
-        }
-        /* Style de la bannière */
-        .banner {
-            background-color: white; /* Couleur blanche pour la bannière */
-            width: 100%; /* Pleine largeur */
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            position: relative;
         }
         /* Animations */
         @keyframes fadeIn {
@@ -213,39 +190,26 @@
             
             <section class="mission">
                 <h2>📊🚀 Notre Mission</h2>
-                <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données fiables et pertinentes.</p>
+                <p>Chez Help Info Entreprise, notre mission est de transformer les données de nos clients en moteurs de performance. Nous proposons des solutions sur mesure pour structurer, analyser et valoriser l'information, permettant aux entreprises de prendre des décisions stratégiques basées sur des données concrètes.</p>
             </section>
 
-            <section class="services">
-                <h2>💡🛠️ Nos services</h2>
-                <p>Nous offrons une large gamme de services dédiés aux entreprises, qu'elles soient petites, moyennes ou grandes :</p>
-                <ul>
-                    <li>✅🔍 Audit Stratégique de l'Information : Analyse complète des flux d'information internes et externes.</li>
-                    <li>💻🛠️ Implémentation de Solutions SI (Systèmes d'Information) : Mise en place d'outils technologiques pour une gestion efficace des données.</li>
-                    <li>📑🔒 Conseil en Gouvernance de l'Information : Élaboration de stratégies adaptées pour la protection et la valorisation de vos données.</li>
-                    <li>🧠📈 Formations et Ateliers : Sensibilisation et formation des équipes à la gestion de l'information.</li>
-                </ul>
+            <section class="articles">
+                <h2 class="articles-title">📰 Articles récents</h2>
+                <div class="article">
+                    <img src="https://via.placeholder.com/150" alt="Article 1">
+                    <div class="article-content">
+                        <h3>Titre de l'Article 1</h3>
+                        <p>Description de l'article 1. Un aperçu des stratégies pour optimiser votre gestion de l'information.</p>
+                    </div>
+                </div>
+                <div class="article">
+                    <img src="https://via.placeholder.com/150" alt="Article 2">
+                    <div class="article-content">
+                        <h3>Titre de l'Article 2</h3>
+                        <p>Description de l'article 2. Un guide sur l'implémentation des solutions de systèmes d'information.</p>
+                    </div>
+                </div>
             </section>
-        </div>
-
-        <!-- Titre des articles -->
-        <h2 class="articles-title">📰 Articles</h2>
-        
-        <!-- Articles sur l'innovation -->
-        <div class="article">
-            <img src="https://www.learnthings.fr/wp-content/uploads/2024/07/ressources-pour-vous-former-gratuitement-a-la-data-science.jpg" alt="Intelligence Artificielle">
-            <div class="article-content">
-                <h3>Article 1 : L'Intelligence Artificielle au Service des Systèmes d'Information</h3>
-                <p>L'intégration de l'intelligence artificielle dans les systèmes d'information révolutionne la manière dont les entreprises analysent leurs données. Cette innovation permet une prise de décision plus rapide et précise, optimisant ainsi les performances organisationnelles.</p>
-            </div>
-        </div>
-
-        <div class="article">
-            <img src="https://img.freepik.com/photos-gratuite/assise-par-terre-ordinateur-portable-ai-generative_901242-42225.jpg" alt="Blockchain">
-            <div class="article-content">
-                <h3>Article 2 : La Blockchain pour la Sécurisation des Données</h3>
-                <p>La technologie blockchain offre une nouvelle approche pour sécuriser les données au sein des systèmes d'information. Grâce à sa structure décentralisée, elle garantit l'intégrité et la transparence des informations, réduisant ainsi les risques de fraudes.</p>
-            </div>
         </div>
     </div>
 </body>
