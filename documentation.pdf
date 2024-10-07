@@ -1,63 +1,39 @@
 \documentclass{article}
-\usepackage{amsmath}
-\usepackage{graphicx}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Un texte fait en LaTeX}
+\author{E. Reyes}
+\date{29 September 2023}
 
 \begin{document}
 
-\title{Bienvenue chez Help Info Entreprise}
-\author{}
-\date{}
 \maketitle
 
-\section*{Votre allié incontournable pour la gestion de l'information}
-Chez \textbf{Help Info Entreprise}, nous sommes dédiés à accompagner les entreprises de tous secteurs dans l'optimisation de leur gestion des données. Grâce à nos stratégies d'information avancées, nous favorisons une prise de décision éclairée et améliorons l'efficacité organisationnelle.
+\tableofcontents
 
-\section*{Notre Mission : Transformer les données en moteurs de performance}
-\begin{quote}
-\textit{Notre mission est de proposer des solutions sur mesure pour structurer, analyser et valoriser l'information. Cela permet aux entreprises de prendre des décisions stratégiques basées sur des données concrètes.}
-\end{quote}
 
-\section*{Carte Heuristique : Help Info Entreprise}
+\section{Chapitre 1. Présentation de l'entreprise}
 
-\begin{center}
-\includegraphics[width=\textwidth]{mindmap.png} % Ajouter un diagramme ici si disponible
-\end{center}
+\paragraph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mi nibh. Ut imperdiet sapien et eros molestie varius. Donec consectetur dolor nec mollis commodo. Nullam finibus eros vitae metus lobortis, sed aliquam turpis dapibus. \textbf{Vivamus} a est turpis. Proin vestibulum ipsum sed velit tincidunt, sed luctus urna tincidunt. Morbi non lorem dolor. Suspendisse potenti. Vestibulum feugiat lacus ut metus convallis tempus. }
 
-Voici une proposition de carte heuristique :
-\begin{verbatim}
-                               Help Info Entreprise
-                                        |
-             +-----------------------------------------------------+
-             |                                                     |
-      Mission: Transformer les données                   Services Offerts
-             |                                                     |
-   +-----------------------+                            +-------------------+
-   |                       |                            |                   |
-Structuration       Analyse et Valorisation         Solutions sur Mesure   Formation
-   |                       |                            |                   |
-   |                       |                            |                   |
-Optimisation        Interprétation des données         Gestion de projets   Ateliers pratiques
-   |                       |                            |                   |
-   |                       |                            |                   |
-Prise de décision      Indicateurs clés              Accompagnement       Séminaires
-\end{verbatim}
+\section{Chapitre 2. Mes missions}
 
-\section*{Explications des Éléments de la Carte Heuristique}
+\paragraph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mi nibh. Ut imperdiet sapien et eros molestie varius. Donec consectetur dolor nec mollis commodo. Nullam finibus eros vitae metus lobortis, sed aliquam turpis dapibus. Vivamus a est turpis. Proin vestibulum ipsum sed velit tincidunt, sed luctus urna tincidunt. Morbi non lorem dolor. Suspendisse potenti. Vestibulum feugiat lacus ut metus convallis tempus \cite{otlet1990international}. }
 
-\paragraph{Mission} L'objectif fondamental de \textbf{Help Info Entreprise} est de transformer les données en moteurs de performance pour aider les entreprises à exceller.
+\section{Chapitre 3. Mes résultats et expériences}
 
-\paragraph{Structuration} Nous aidons à organiser les données de manière cohérente et accessible, ce qui facilite leur utilisation pour la prise de décision.
+\paragraph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mi nibh. Ut imperdiet sapien et eros molestie varius. Donec consectetur dolor nec mollis commodo. Nullam finibus eros vitae metus lobortis, sed aliquam turpis dapibus. Vivamus a est turpis. Proin vestibulum ipsum sed velit tincidunt, sed luctus urna tincidunt. Morbi non lorem dolor. Suspendisse potenti. Vestibulum feugiat lacus ut metus convallis tempus. }
 
-\paragraph{Analyse et Valorisation} Nous analysons les données pour en extraire des insights significatifs, permettant aux entreprises de mieux comprendre leur environnement et leurs performances.
+\section{Chapitre 4. Mes refléxions}
 
-\subsection*{Services Offerts}
-\begin{itemize}
-    \item \textbf{Solutions sur Mesure} : Offrir des solutions adaptées aux besoins spécifiques de chaque entreprise.
-    \item \textbf{Formation} : Proposer des formations pour renforcer les compétences internes en gestion de l'information.
-    \item \textbf{Accompagnement} : Accompagner nos clients tout au long du processus d'optimisation de la gestion des données, en leur fournissant les outils et les connaissances nécessaires.
-\end{itemize}
+\paragraph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mi nibh. Ut imperdiet sapien et eros molestie varius. Donec consectetur dolor nec mollis commodo. Nullam finibus eros vitae metus lobortis, sed aliquam turpis dapibus. Vivamus a est turpis. Proin vestibulum ipsum sed velit tincidunt, sed luctus urna tincidunt. Morbi non lorem dolor. Suspendisse potenti. Vestibulum feugiat lacus ut metus convallis tempus \cite{chaudiron2010recherche}   }
 
-\section*{Conclusion}
-\textbf{Help Info Entreprise} est votre partenaire idéal pour transformer vos défis liés à la gestion de l'information en opportunités. \textbf{Contactez-nous} pour découvrir comment nous pouvons vous aider à optimiser votre gestion des données et à améliorer votre efficacité organisationnelle !
+\section{Conclusion}
+
+\paragraph{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut mi nibh. Ut imperdiet sapien et eros molestie varius. Donec consectetur dolor nec mollis commodo. Nullam finibus eros vitae metus lobortis, sed aliquam turpis dapibus. Vivamus a est turpis. Proin vestibulum ipsum sed velit tincidunt, sed luctus urna tincidunt. Morbi non lorem dolor. Suspendisse potenti. Vestibulum feugiat lacus ut metus convallis tempus. }
+
+
+\bibliographystyle{plain} % sélectionnez le style "plain"
+\bibliography{refs} % Cette ligne accède à la liste sur refs.bib
 
 \end{document}
