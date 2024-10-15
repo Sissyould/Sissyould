@@ -11,5 +11,6 @@ Une autre difficulté majeure concerne l'utilisation de LaTeX pour la générati
 ## Conclusion
 En résumé, la réalisation de ce projet m'a permis de consolider mes compétences en conception de l'information et en développement web. Les défis techniques rencontrés m'ont permis d'améliorer mes pratiques de codage et de création de contenu. Le résultat final est un site web structuré et fonctionnel, qui témoigne des nombreuses compétences que j'ai pu mettre en pratique grâce aux enseignements du cours.
 
-# Lien : 
-le lien vers la version live : https://sissyould.github.io/Sissyould/
+# Liens : 
+Le lien vers la version live : https://sissyould.github.io/Sissyould/
+Le lien vers Accueil Administration/ Plan de travil : "https://github.com/Sissyould/Sissyould/tree/main" 
