@@ -8,79 +8,77 @@
     <link rel="icon" href="https://raw.githubusercontent.com/Sissyould/Sissyould/refs/heads/main/Sans%20titre.png" sizes="30x30" type="image/png">
     <title>Aide Info Entreprise</title>
     <style>
-        body {
-            font-family: 'Inria Sans', sans-serif;
-            padding: 0;
+        /* S'assure que tout le contenu occupe la pleine hauteur de la fenêtre */
+        html, body {
+            height: 100%;
             margin: 0;
+            padding: 0;
+            font-family: 'Inria Sans', sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            color: #333;
             background-color: #f0f0f0;
         }
 
+        /* Style du titre principal */
         h1 {
             color: #1E90FF;
             font-size: 36px;
-            margin-top: 30px;
             text-align: center;
-        }
-
-        .logo {
-            display: block;
-            margin: 20px auto;
-            width: 120px;
-        }
-
-        section {
-            width: 100%;
-            max-width: 800px;
-            background-color: white;
+            margin: 0;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        /* Section en plein écran */
+        section {
+            width: 100vw; /* Pleine largeur de la fenêtre */
+            height: 100vh; /* Pleine hauteur de la fenêtre */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 20px;
+            margin: 0;
+            background-color: white;
+        }
+
+        /* Style pour le conteneur de vidéos */
         .video-container {
-            margin: 30px 0;
-            width: 100%;
-            height: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100vw;
+            height: 100vh;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
         }
 
         .video-container video {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
+            object-fit: cover; /* La vidéo couvre toute la section */
+        }
+
+        /* Style pour les sections de contenu textuel */
+        .intro, .conclusion {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 40px;
         }
 
         h2 {
             color: #1E90FF;
             font-size: 28px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         p {
-            line-height: 1.6;
-            margin-bottom: 15px;
             color: #555;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
             font-size: 18px;
-            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
+        /* Boutons stylés pour contact et plus d'infos */
         .button-container {
             text-align: center;
             margin-top: 20px;
@@ -100,37 +98,6 @@
 
         .button-container a:hover {
             background-color: #1c86ee;
-        }
-
-        .article {
-            display: flex;
-            margin-bottom: 20px;
-            background-color: #fafafa;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .article:hover {
-            transform: scale(1.02);
-        }
-
-        .article img {
-            width: 40%;
-            height: auto;
-            border-radius: 5px;
-            margin-right: 15px;
-        }
-
-        .article-content {
-            flex-grow: 1;
-        }
-
-        .article h3 {
-            color: #1E90FF;
-            margin-bottom: 10px;
-            font-size: 22px;
         }
     </style>
 </head>
@@ -153,29 +120,26 @@
         <p>La gouvernance des données est devenue un enjeu crucial pour les entreprises dans un monde de plus en plus axé sur l'information. Elle désigne l'ensemble des processus, politiques et normes qui régissent la gestion, l'intégrité, la sécurité et la qualité des données au sein d'une organisation.</p>
     </section>
 
-    <!-- Section Meilleures Pratiques -->
-    <section class="best-practices video-container">
+    <!-- Section Vidéo 2 (Best Practices) -->
+    <section class="video-container">
         <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/videosouspag3.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise vidéo.
         </video>
     </section>
 
-    <!-- Section Comment Nous Aidons -->
-   <section class="best-practices video-container">
+    <!-- Section Vidéo 3 (Comment Nous Aidons) -->
+    <section class="video-container">
         <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/souspag3Vdo2.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la balise vidéo.
+        </video>
     </section>
 
     <!-- Section Conclusion -->
     <section class="conclusion">
         <h2>Conclusion 🎯</h2>
-        <p>Investir dans une gouvernance des données solide n'est pas seulement une obligation réglementaire, mais également un atout stratégique pour toute entreprise. En protégeant et en valorisant vos informations, vous garantissez la durabilité et la croissance de votre organisation. Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à renforcer votre gouvernance de l'information. ✉️</p>
-    </section>
-
-    <!-- Section des articles -->
-    <section class="articles-section">
+        <p>Investir dans une gouvernance des données solide n'est pas seulement une obligation réglementaire, mais également un atout stratégique pour toute entreprise. En protégeant et en valorisant vos informations, vous garantissez la durabilité et la croissance de votre organisation.</p>
         <div class="button-container">
             <a href="#">Contactez-nous</a>
             <a href="#">En savoir plus</a>
@@ -183,17 +147,15 @@
     </section>
 
     <script>
-        // Sélectionner tous les conteneurs vidéo
-        const videoContainers = document.querySelectorAll('.video-container video');
-
-        // Ajouter un écouteur d'événements pour la souris
-        videoContainers.forEach(video => {
+        // Pause la vidéo au survol avec la souris
+        const videos = document.querySelectorAll('.video-container video');
+        videos.forEach(video => {
             video.addEventListener('mouseenter', () => {
-                video.pause(); // Mettre en pause la vidéo lorsque la souris passe dessus
+                video.pause();
             });
 
             video.addEventListener('mouseleave', () => {
-                video.play(); // Reprendre la vidéo lorsque la souris s'éloigne
+                video.play();
             });
         });
     </script>
