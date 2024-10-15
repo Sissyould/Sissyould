@@ -1,42 +1,15 @@
-# Audit Stratégique de l'Information
+# Conception du site web : utilisation des outils et méthodes
+## Création des médias : vidéo et images
+Pour les vidéos et les images présentes sur le site, j'ai moi-même créé les éléments visuels en utilisant des outils tels que Canva et Animaker . En ce qui concerne le favicon (l'icône qui apparaît dans l'onglet du navigateur), j'ai utilisé Pixlr , ainsi que d'autres outils mis à disposition dans le cadre du cours de design de l'information, proposés par notre professeur sur la plateforme dédiée.
+## Gestion du contenu textuel
+Pour le contenu textuel, j'ai utilisé LaTeX afin de générer un PDF bien structuré, ce qui m'a permis de présenter un texte de qualité professionnelle. J'ai également intégré des images dans ce document pour enrichir le contenu visuel.
+Réalisations
+J'ai réussi à créer un site web intéressant avec un concept et un contenu fictif, mais une mise en page bien travaillée. J'ai exploré différents formats adaptés à la conception d'un site web d'attraction. En plus de la page principale, j'ai conçu des sous-pages afin d'organiser le contenu de manière plus claire et structurée. J'ai également intégré différents formats de médias et de texte, enrichissant ainsi l'expérience utilisateur.
+## Difficultés rencontrées
+Au début du projet, j'ai rencontré des difficultés liées au nommage des fichiers. J'ai rapidement compris qu'il fallait éviter l'utilisation de caractères spéciaux, car cela pourrait provoquer des erreurs lors de l'intégration des fichiers dans le code. J'ai donc soigneusement renommé tous les fichiers pour m'assurer qu'ils s'affichent correctement en mode LIVE.
+Une autre difficulté majeure concerne l'utilisation de LaTeX pour la génération de mon PDF, notamment en ce qui concerne l'intégration des références. J'ai eu du mal à les former correctement, mais après plusieurs essais, j'ai finalement réussi à les intégrer de manière satisfaisante.
+## Conclusion
+En résumé, la réalisation de ce projet m'a permis de consolider mes compétences en conception de l'information et en développement web. Les défis techniques rencontrés m'ont permis d'améliorer mes pratiques de codage et de création de contenu. Le résultat final est un site web structuré et fonctionnel, qui témoigne des nombreuses compétences que j'ai pu mettre en pratique grâce aux enseignements du cours.
 
-
-## Présentation 📊✨
-Dans un monde où les données sont considérées comme l'or du XXIe siècle, la gestion efficace de l'information est cruciale pour la prise de décision stratégique.Un audit stratégique de l'information permet aux entreprises de faire un état des lieux de leurs pratiques actuelles,d'identifier les lacunes et de mettre en œuvre des solutions adaptées. Grâce à un audit, vous pourrez transformer vos données en atouts pour votre organisation, véritable en facilitant une prise de décision éclairée.
-
-## Objectifs de l'Audit 🎯🔍
-L'audit de l'information vise plusieurs objectifs clés :
-### 1. Améliorer la qualité des données :
-Assurer que les données sont précises, fiables et à jour. Cela inclut l'élimination des doublons et la correction des erreurs.
-### 2. Optimiser les flux d'information : 
-Analyser comment les données circulent au sein de l'organisation et identifier les goulets d'étranglement.
-### 3. Renforcer la sécurité des données :
-Identifier les vulnérabilités et mettre en place des protocoles de sécurité appropriés pour protéger les informations sensibles.
-### 4. Faciliter la conformité : 
-Aider les entreprises à respecter les réglementations en matière de gestion des données (comme le RGPD) en fournissant des recommandations spécifiques.
-
-## Méthodologie 🔧📋
-Notre processus d'audit se déroule en plusieurs étapes :
-### 1. Analyse Préliminaire : 
-Nous commençons par une évaluation des processus de gestion de l'information existante. Cela inclut des entretiens avec les équipes clés et l'examen des systèmes en place.
-### 2. Collecte de Données : 
-Nous recueillons des données pertinentes via des questionnaires, des enquêtes et des analyses de systèmes. Cela nous permet d'obtenir une vue d'ensemble des pratiques actuelles.
-### 3. Évaluation : 
-À partir des données recueillies, nous analysons la performance actuelle et identifions les domaines nécessitant des améliorations.
-### 4. Recommandations :
-Nous proposons des recommandations concrètes pour optimiser la gestion des données. Ces recommandations peuvent inclure l'implémentation de nouveaux outils technologiques ou l'adoption de meilleures pratiques.
-
-## Études de Cas 📚💼
-Pour illustrer l'impact de notre audit stratégique, voici quelques exemples concrets de clients que nous avons aidés :
-### Client A : 
-Après un audit approfondi, nous avons identifié des redondances dans leurs systèmes de gestion de données. En rationalisant ces processus, le client a vu une réduction de 30% de ses coûts opérationnels.
-### Client B : 
-Nous avons aidé une entreprise à renforcer la sécurité de ses données, en mettant en place des protocoles qui ont diminué le risque de fuite d'informations de 50%.
-### Client C : 
-Grâce à nos recommandations sur l'optimisation des flux d'information, cette entreprise a amélioré la collaboration entre ses équipes, ce qui a conduit à une augmentation de 20% de son efficacité opérationnelle.
-
-## Appel à l'action 📞💬
-Prêt à faire passer votre gestion de l'information au niveau supérieur ? Contactez-nous dès aujourd'hui pour un audit personnalisé ! Nos experts sont là pour vous aider à transformer vos données en un véritable atout stratégique pour votre entreprise.
-
-
+# Lien : 
 le lien vers la version live : https://sissyould.github.io/Sissyould/
