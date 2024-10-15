@@ -8,77 +8,70 @@
     <link rel="icon" href="https://raw.githubusercontent.com/Sissyould/Sissyould/refs/heads/main/Sans%20titre.png" sizes="30x30" type="image/png">
     <title>Aide Info Entreprise</title>
     <style>
-        /* S'assure que tout le contenu occupe la pleine hauteur de la fenêtre */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        /* Styles de base */
+        body {
             font-family: 'Inria Sans', sans-serif;
+            padding: 0;
+            margin: 0;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            color: #333;
             background-color: #f0f0f0;
         }
 
-        /* Style du titre principal */
         h1 {
             color: #1E90FF;
             font-size: 36px;
+            margin-top: 30px;
             text-align: center;
-            margin: 0;
-            padding: 20px;
         }
 
-        /* Section en plein écran */
         section {
-            width: 100vw; /* Pleine largeur de la fenêtre */
-            height: 100vh; /* Pleine hauteur de la fenêtre */
+            width: 100vw; /* Pleine largeur */
+            height: 100vh; /* Pleine hauteur */
             display: flex;
             justify-content: center;
             align-items: center;
-            box-sizing: border-box;
+            background-color: white;
             padding: 20px;
             margin: 0;
-            background-color: white;
         }
 
-        /* Style pour le conteneur de vidéos */
+        /* Conteneur vidéo en pleine largeur et pleine hauteur */
         .video-container {
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: black;
+            overflow: hidden;
+            background-color: black; /* Pour un contraste visuel agréable */
         }
 
+        /* Vidéos en plein écran */
         .video-container video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* La vidéo couvre toute la section */
+            object-fit: cover; /* Assure que la vidéo couvre tout l'écran sans déformation */
         }
 
-        /* Style pour les sections de contenu textuel */
-        .intro, .conclusion {
-            background-color: #f9f9f9;
-            text-align: center;
-            padding: 40px;
-        }
-
+        /* Styles des titres dans les sections */
         h2 {
             color: #1E90FF;
             font-size: 28px;
-            margin-bottom: 20px;
+            text-align: center;
         }
 
         p {
-            color: #555;
-            font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #555;
+            text-align: center;
+            padding: 20px;
         }
 
-        /* Boutons stylés pour contact et plus d'infos */
+        /* Boutons stylés pour les appels à l'action */
         .button-container {
             text-align: center;
             margin-top: 20px;
@@ -106,7 +99,7 @@
 
     <h1>🌐 Conseil en Gouvernance de l'Information 🌐</h1>
 
-    <!-- Section Vidéo d'accueil -->
+    <!-- Section Vidéo d'accueil en plein écran -->
     <section class="video-container">
         <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/SP3v0.mp4" type="video/mp4">
@@ -114,13 +107,13 @@
         </video>
     </section>
 
-    <!-- Section d'introduction -->
+    <!-- Section d'introduction en pleine largeur et hauteur -->
     <section class="intro">
         <h2>L'Importance de la Gouvernance des Données 📊</h2>
         <p>La gouvernance des données est devenue un enjeu crucial pour les entreprises dans un monde de plus en plus axé sur l'information. Elle désigne l'ensemble des processus, politiques et normes qui régissent la gestion, l'intégrité, la sécurité et la qualité des données au sein d'une organisation.</p>
     </section>
 
-    <!-- Section Vidéo 2 (Best Practices) -->
+    <!-- Section Vidéo 2 (Meilleures pratiques) en plein écran -->
     <section class="video-container">
         <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/videosouspag3.mp4" type="video/mp4">
@@ -128,7 +121,7 @@
         </video>
     </section>
 
-    <!-- Section Vidéo 3 (Comment Nous Aidons) -->
+    <!-- Section Vidéo 3 (Comment Nous Aidons) en plein écran -->
     <section class="video-container">
         <video autoplay muted loop>
             <source src="https://github.com/Sissyould/Sissyould/raw/refs/heads/main/souspag3Vdo2.mp4" type="video/mp4">
@@ -136,10 +129,10 @@
         </video>
     </section>
 
-    <!-- Section Conclusion -->
+    <!-- Section Conclusion en pleine largeur et hauteur -->
     <section class="conclusion">
         <h2>Conclusion 🎯</h2>
-        <p>Investir dans une gouvernance des données solide n'est pas seulement une obligation réglementaire, mais également un atout stratégique pour toute entreprise. En protégeant et en valorisant vos informations, vous garantissez la durabilité et la croissance de votre organisation.</p>
+        <p>Investir dans une gouvernance des données solide n'est pas seulement une obligation réglementaire, mais également un atout stratégique pour toute entreprise. En protégeant et en valorisant vos informations, vous garantissez la durabilité et la croissance de votre organisation. Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à renforcer votre gouvernance de l'information. ✉️</p>
         <div class="button-container">
             <a href="#">Contactez-nous</a>
             <a href="#">En savoir plus</a>
